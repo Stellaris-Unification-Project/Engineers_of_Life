@@ -1,0 +1,17 @@
+Features:
+
+Future:
+- New special faction "Creators/Founders/Ancestors" (fanatic xenophile)
+- New special ai personality "Creationists" (fanatic xenophile + spiritualist + New Origins)
+- Origins: Eden Project
+	- Machine version of 'The Creators' origin
+
+Comment by Spider:
+"I actually did have a few. One would be event chains based on your primary ethic when seeding a new planet. For example, Spiritualists could see to it that the primitive species they created shares their faith, while Materialists could intentionally seed a planet with a species that has low habitability for that planet class just to see if they can evolve. Xenophiles can create species that will eventually have the 'Life-Seeded' origin if they become a full-fledged spacefaring civilization, while Xenophobes could intentionally put a species on a hellish planet just for their own amusement. Authoritarians and Egalitarians would mostly be interested in ensuring that the species doesn't develop the 'wrong' beliefs. Gestalts... not sure, honestly.
+
+I did have another crazy idea, but it's kind of beyond the scope of a mod like this and would involve compatibility with other mods."
+
+The Creator Overview:
+- Add game start text for creators origin
+
+

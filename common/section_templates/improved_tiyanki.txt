@@ -1,0 +1,167 @@
+#Tiyanki Calf Section
+ship_section_template = {
+	key = "eng_imp_space_whale_calf_section"
+	ship_size = eng_imp_space_whale_calf
+	fits_on_slot = mid
+	entity = "empty_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "root"
+	}
+	
+	aux_utility_slots = 1
+
+	resources = {
+		category = ship_sections
+		cost = {
+			food = @section_cost
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# Space Whale Cow Section
+ship_section_template = {
+	key = "eng_imp_space_whale_cow_section"
+	ship_size = eng_imp_space_whale_cow
+	fits_on_slot = mid
+	entity = "space_whale_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "small_turret"
+		locatorname = "gun_01"
+	}
+	
+	aux_utility_slots = 1
+
+	resources = {
+		category = ship_sections
+		cost = {
+			food = @section_cost
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# Space Whale Bull Section
+ship_section_template = {
+	key = "eng_imp_space_whale_bull_section"
+	ship_size = eng_imp_space_whale_bull
+	fits_on_slot = mid
+	entity = "space_whale_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_03"
+		template = "small_turret"
+		locatorname = "gun_01"
+	}
+	component_slot = {
+		name = "SMALL_GUN_04"
+		template = "small_turret"
+		locatorname = "gun_01"
+	}
+	
+	aux_utility_slots = 1
+
+	resources = {
+		category = ship_sections
+		cost = {
+			food = @section_cost
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+}
+
+# Elderly Tiyanki
+ ship_section_template = {
+ 	key = "eng_elderly_tiyanki_key"
+ 	ship_size = eng_imp_leviathan_01_elder_tiyanki
+ 	fits_on_slot = mid
+ 	entity = "leviathan_01_elder_tiyanki_section_entity"
+ 	icon = "GFX_ship_part_core_mid"
+ 	
+ 	component_slot = {
+ 		name = "TITAN_01"
+ 		template = "invisible_titanic_fixed"
+ 		locatorname = "xl_gun_01"
+ 	}
+ 	component_slot = {
+ 		name = "LARGE_GUN_01"
+ 		template = "large_turret"
+ 		locatorname = "head"
+ 	}
+ 	
+ 	large_utility_slots = 10
+ 	aux_utility_slots = 1
+
+	resources = {
+		category = ship_sections
+		cost = {
+			food = @section_cost
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+	}
+ }

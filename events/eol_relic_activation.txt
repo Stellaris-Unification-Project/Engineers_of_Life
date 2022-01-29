@@ -1,0 +1,133 @@
+namespace = eolrelics
+
+# Custodian Beacon Activation
+country_event = {
+	id = eolrelics.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				any_country = {
+					has_country_flag = fallen_empire_machine
+				}
+			}
+			random_country = {
+				limit = {
+					has_country_flag = fallen_empire_machine
+				}
+				save_event_target_as = fallen_custodian_empire
+			}
+			country_event = { id = eolrelics.2 }
+		}
+		else = {
+			country_event = { id = eolrelics.3 }
+		}
+	}
+}
+
+# Custodian Fleet
+country_event = {
+	id = eolrelics.2
+	title = TRANSMISSION
+	desc = "eolrelics.2.a.desc"
+    	desc = "eolrelics.2.b.desc"
+    	desc = "eolrelics.2.c.desc"
+    	desc = "eolrelics.2.d.desc"
+	
+	diplomatic = yes
+	
+	is_triggered_only = yes
+	
+	picture_event_data = {
+		portrait = event_target:fallen_custodian_empire
+		room = "ethic_spaceship_room"
+	}
+	
+	option = {
+		name = eolrelics.2.a
+		hidden_effect = {
+			capital_scope = {
+				create_fleet = {
+					name = "Custodian Protection Asset"
+					effect = {
+						set_owner = event_target:fallen_custodian_empire # For ship names
+						while = {
+							count = 1
+							create_fallen_empire_large_ship = yes
+						}
+						set_location = {
+							target = prev
+							distance = 45
+							angle = random
+						}
+						set_owner = root
+					}
+				}
+			}
+		}
+	}
+}
+
+# Custodian Fleet (Fallen Empire Gone)
+country_event = {
+	id = eolrelics.3
+	title = "eolrelics.3.name"
+	desc = "eolrelics.3.desc"
+	picture = GFX_evt_fleet_from_surface
+	show_sound = event_bad_omen
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = eolrelics.2.a
+		hidden_effect = {
+			capital_scope = {
+				create_fleet = {
+					name = "Custodian Protection Asset"
+					effect = {
+						set_owner = root
+						while = {
+							count = 1
+							create_ship = {
+								name = random
+								design = "NAME_Custodian"
+								graphical_culture = fallen_machine_empire_01
+							}
+						}
+						set_location = {
+							target = prev
+							distance = 45
+							angle = random
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = eolrelics.4
+    
+    hide_window = yes
+	is_triggered_only = yes
+    
+    trigger = {
+		is_ai = no
+		event_target:contact_empire = { 
+            	has_country_flag = fallen_empire_machine
+        }
+	}
+	
+	option = {
+		trigger = {
+			has_origin = origin_creators
+		}
+		name = eolrelics.4.a
+		add_relic = r_custodian_beacon
+	}
+}

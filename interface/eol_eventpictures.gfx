@@ -1,0 +1,27 @@
+spriteTypes = {	
+
+
+	spriteType = {
+		name = "GFX_evt_steam_age"
+		texturefile = "gfx/event_pictures/steam_age.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes		
+	}
+
+	
+	spriteType = {
+		name = "GFX_evt_industrial_age"
+		texturefile = "gfx/event_pictures/industrial_age.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes		
+	}
+
+	
+	spriteType = {
+		name = "GFX_evt_machine_age"
+		texturefile = "gfx/event_pictures/machine_age.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes		
+	}
+
+}

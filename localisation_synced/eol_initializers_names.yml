@@ -1,0 +1,111 @@
+﻿l_default:
+
+ # Fleet Names
+ NAME_Amoeba_Hatchling:0 "Amoeba Hatchling"
+ NAME_Amoeba_Hatchlings:0 "Amoeba Hatchlings"
+ NAME_Amoeba_Hatchling_Group:0 "Amoeba Hatchling Group"
+ NAME_Amoeba_Hatchling_Gathering:0 "Amoeba Hatchling Gathering"
+ NAME_Amoeba_Hatchling_Swarm:0 "Amoeba Hatchling Swarm"
+ 
+ NAME_Amoeba_Mother:0 "Amoeba Mother"
+ NAME_Amoeba_Mothers:0 "Amoeba Mothers"
+ NAME_Amoeba_Mother_Group:0 "Amoeba Mother Group"
+ NAME_Amoeba_Mother_Gathering:0 "Amoeba Mother Gathering"
+ NAME_Amoeba_Mother_Swarm:0 "Amoeba Mother Swarm"
+ 
+ NAME_Amoeba_Centenarian:0 "Amoeba Centenarian"
+ NAME_Amoeba_Centenarians:0 "Amoeba Centenarians"
+ NAME_Amoeba_Centenarian_Group:0 "Amoeba Centenarian Group"
+ NAME_Amoeba_Centenarian_Gathering:0 "Amoeba Centenarian Gathering"
+ NAME_Amoeba_Centenarian_Swarm:0 "Amoeba Centenarian Swarm"
+ 
+ NAME_Tiyanki_Calf:0 "Tiyanki Calf"
+ NAME_Tiyanki_Calfs:0 "Tiyanki Calfs"
+ NAME_Tiyanki_Calf_Group:0 "Tiyanki Calf Group"
+ NAME_Tiyanki_Calf_Herd:0 "Tiyanki Calf Herd"
+ NAME_Tiyanki_Calf_Swarm:0 "Tiyanki Calf Swarm"
+ 
+ NAME_Tiyanki_Cow:0 "Tiyanki Cow"
+ NAME_Tiyanki_Cows:0 "Tiyanki Cows"
+ NAME_Tiyanki_Cow_Group:0 "Tiyanki Cow Group"
+ NAME_Tiyanki_Cow_Herd:0 "Tiyanki Cow Herd"
+ NAME_Tiyanki_Cow_Swarm:0 "Tiyanki Cow Swarm"
+ 
+ NAME_Tiyanki_Bull:0 "Tiyanki Bull"
+ NAME_Tiyanki_Bulls:0 "Tiyanki Bulls"
+ NAME_Tiyanki_Bull_Group:0 "Tiyanki Bull Group"
+ NAME_Tiyanki_Bull_Herd:0 "Tiyanki Bull Herd"
+ NAME_Tiyanki_Bull_Swarm:0 "Tiyanki Bull Swarm"
+ 
+ NAME_Tiyanki_Matriarch:0 "Tiyanki Matriarch"
+ 
+ NAME_Crystal_Shardling:0 "Crystal Shardling"
+ NAME_Crystal_Shardlings:0 "Crystal Shardlings"
+ NAME_Crystal_Shardling_Group:0 "Crystal Shardling Group"
+ NAME_Crystal_Shardling_Compound:0 "Crystal Shardling Compound"
+ NAME_Crystal_Shardling_Union:0 "Crystal Shardling Union"
+ 
+ NAME_Crystal_Shard:0 "Crystal Shard"
+ NAME_Crystal_Shards:0 "Crystal Shards"
+ NAME_Crystal_Shard_Group:0 "Crystal Shard Group"
+ NAME_Crystal_Shard_Compound:0 "Crystal Shard Compound"
+ NAME_Crystal_Shard_Union:0 "Crystal Shard Union"
+ 
+ NAME_Crystal_Quintessence:0 "Crystal Quintessence"
+ NAME_Crystal_Quintessences:0 "Crystal Quintessences"
+ NAME_Crystal_Quintessence_Group:0 "Crystal Quintessence Group"
+ NAME_Crystal_Quintessence_Compound:0 "Crystal Quintessence Compound"
+ NAME_Crystal_Quintessence_Union:0 "Crystal Quintessence Union"
+ 
+ NAME_Crystal_Core:0 "Crystal Core"
+ 
+ NAME_Lesser_Void_Cloud:0 "Lesser Void Cloud"
+ NAME_Lesser_Void_Clouds:0 "Lesser Void Clouds"
+ NAME_Lesser_Void_Cloud_Group:0 "Lesser Void Cloud Group"
+ NAME_Lesser_Void_Cloud_Compound:0 "Lesser Void Cloud Compound"
+ NAME_Lesser_Void_Cloud_Union:0 "Lesser Void Cloud Union"
+ 
+ NAME_Void_Cloud:0 "Void Cloud"
+ NAME_Void_Clouds:0 "Void Clouds"
+ NAME_Void_Cloud_Group:0 "Void Cloud Group"
+ NAME_Void_Cloud_Compound:0 "Void Cloud Compound"
+ NAME_Void_Cloud_Union:0 "Void Cloud Union"
+ 
+ NAME_Shroud_Avatar:0 "Shroud Avatar"
+ 
+ NAME_Voidspawn:0 "Voidspawn"
+ 
+ NAME_Ether_Drake_Hatchling:0 "Ether Drake Hatchling"
+ NAME_Ether_Drake:0 "Ether Drake"
+ 
+ NAME_Dimensional_Horror:0 "Dimensional Horror"
+ 
+ NAME_Stellar_Devourer:0 "Stellar Devourer"
+ 
+ # Global Ship Designs
+ NAME_Eng_Small_Space_Organism_Zebra:0 "Amoeba Hatchling"
+ NAME_Eng_Large_Space_Organism_Zebra:0 "Amoeba Mother"
+ NAME_Eng_Cente:0 "Amoeba Centenarian"
+ 
+ NAME_Eng_Tiyanki_Calf:0 "Whale Calf"
+ NAME_Eng_Tiyanki_Cow:0 "Whale Cow"
+ NAME_Eng_Tiyanki_Bull:0 "Whale Bull"
+ NAME_Eng_Progenitor:0 "Whale Matriarch"
+ 
+ NAME_Eng_Shardling:0 "Crystal Shardling"
+ NAME_Eng_Shard:0 "Crystal Shard"
+ NAME_Eng_Quintessence:0 "Crystal Quintessence"
+ NAME_Eng_Crystal_Nidus:0 "Crystal Core"
+ 
+ NAME_Eng_Lesser_Cloud_Entity:0 "Lesser Void Cloud"
+ NAME_Eng_Cloud_Entity:0 "Greater Void Cloud"
+ NAME_Eng_Corrupted_Avatar:0 "Shrouded Avatar"
+ 
+ NAME_Eng_Voidspawn:0 "Voidspawn Dragon"
+ 
+ NAME_Eng_Imp_Dragonspawn:0 "Ether Dragon Hatchling"
+ NAME_Eng_Imp_Dragon:0 "Ether Dragon"
+ 
+ NAME_Eng_Imp_Dimensional_Horror:0 "Dimension Horror"
+ 
+ NAME_Eng_Imp_Stellarite:0 "Stellarite Devourer"

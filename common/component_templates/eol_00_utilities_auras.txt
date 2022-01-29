@@ -1,0 +1,80 @@
+utility_component_template = {
+	key = "BIO_SHIP_AURA_HEAL_PARASITES_CLOUD"
+	size = medium
+	icon = "GFX_ship_part_extradimensional_weapon_1"
+	icon_frame = 1
+	power = 0
+	
+	component_set = "bio_ship_aura_components"
+	
+	friendly_aura = {
+		name = "aura_parasites_cloud"
+		radius = @shipAuraRange
+		apply_on = ships
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = friendly_parasites_cloud
+			priority = 20
+		}
+		
+		modifier = {
+			ship_hull_regen_add_static = 5
+			ship_armor_regen_add_static = 10
+		}
+		
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+utility_component_template = {
+	key = "BIO_SHIP_AURA_RAGE_PHEROMONES_CLOUD"
+	size = medium
+	icon = "GFX_ship_part_extradimensional_weapon_red"
+	icon_frame = 1
+	power = 0
+	
+	component_set = "bio_ship_aura_components"
+	
+	friendly_aura = {
+		name = "aura_rage_presence"
+		radius = @shipAuraRange
+		apply_on = ships
+		
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = friendly_rage_presence
+			priority = 20
+		}
+		
+		modifier = {
+			ship_fire_rate_mult = 0.1
+		}
+		
+		graphics = {
+			area_effect = {
+				entity = "circle_area_entity"
+				dynamic_scale = yes
+			}
+			ship_effect = {
+				entity = "ship_aura_positive_entity"
+				dynamic_scale = no
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+	}
+}

@@ -1,0 +1,82 @@
+namespace = tcol
+
+### game start
+country_event = {
+	id = tcol.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = origin_creators
+	}
+
+	immediate = {
+		# starting technologies
+		give_technology = { 
+            		tech = tech_sapient_life_engineering
+            		message = no
+        }
+
+		capital_scope = {
+        
+            set_planet_size = 25
+        
+            # Add a random precursor building
+            random_list = {
+                30 = { add_building = building_fe_dome }
+                30 = { add_building = building_nourishment_center }
+                25 = { add_building = building_affluence_center }
+                15 = { add_building = building_class_4_singularity }
+            }
+
+            # clear normal deposits
+            clear_deposits = yes
+
+            # add blockers that replace the slum blockers
+            add_deposit = d_cryovats
+            add_deposit = d_cryovats
+            add_deposit = d_cryovats
+
+            # setup other deposits/blockers that match the relic world setting
+
+            #add_deposit = d_massive_crevice
+            add_deposit = d_flooded_reactor_pits
+            add_deposit = d_crumbling_mining_tunnels
+            add_deposit = d_ruined_arcology
+            add_deposit = d_ruined_arcology
+            add_deposit = d_ruined_arcology
+            add_deposit = d_ruined_arcology
+            add_deposit = d_ruined_arcology
+            add_deposit = d_ruined_arcology
+            add_deposit = d_metal_boneyard
+            add_deposit = d_ancient_bombardment_craters
+            add_deposit = d_ancient_battlefield
+            add_deposit = d_harvester_fields
+            add_deposit = d_organic_landfill
+            add_deposit = d_impact_crater
+            add_deposit = d_immense_solar_array
+
+            # Change districts
+            remove_all_districts = yes
+                
+            add_district = district_city
+            add_district = district_city
+            add_district = district_city
+
+            add_district = district_industrial
+            add_district = district_industrial
+            
+            add_district = district_generator
+            add_district = district_generator
+            add_district = district_generator
+
+            add_district = district_mining
+            add_district = district_mining
+            add_district = district_mining
+
+            add_district = district_farming
+            add_district = district_farming
+            add_district = district_farming
+        }
+    }
+}

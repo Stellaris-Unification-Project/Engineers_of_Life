@@ -1,0 +1,170 @@
+#####################################
+#				    #
+# 	    Space Amoebas	    #
+#				    #
+#####################################
+
+# Small Space Amoeba
+ship_design = {
+	name = "NAME_Eng_Small_Space_Organism_Zebra"
+	ship_size = eng_imp_amoeba
+	is_event_design = yes
+	
+	section = {
+		template = "eng_space_amoeba_small_zebra_blue"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}		
+	}
+	
+	required_component = "BIO_DRIVE_2"
+}
+
+# Large Space Amoeba
+ship_design = {
+	name = "NAME_Eng_Large_Space_Organism_Zebra"
+	ship_size = eng_imp_mother
+	is_event_design = yes
+	
+	section = {
+		template = "eng_space_amoeba_large_zebra_blue"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "IMPROVED_AMOEBA_STRIKE_CRAFT"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	
+	required_component = "BIO_DRIVE_2"
+}
+
+# Space Amoeba Centenarian
+ship_design = {
+	name = "NAME_Eng_Cente"
+	ship_size = eng_imp_cente
+	is_event_design = yes
+	
+	section = {
+		template = "eng_imp_amoeba_centenarian"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "LARGE_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "LARGE_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "LARGE_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "LARGE_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "LARGE_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "LARGE_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "LARGE_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "IMPROVED_AMOEBA_STRIKE_CRAFT"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_02"
+			template = "IMPROVED_AMOEBA_STRIKE_CRAFT"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_03"
+			template = "IMPROVED_AMOEBA_STRIKE_CRAFT"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_04"
+			template = "IMPROVED_AMOEBA_STRIKE_CRAFT"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_05"
+			template = "IMPROVED_AMOEBA_STRIKE_CRAFT"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_06"
+			template = "IMPROVED_AMOEBA_STRIKE_CRAFT"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_07"
+			template = "IMPROVED_AMOEBA_STRIKE_CRAFT"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_08"
+			template = "IMPROVED_AMOEBA_STRIKE_CRAFT"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_09"
+			template = "IMPROVED_AMOEBA_STRIKE_CRAFT"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_10"
+			template = "IMPROVED_AMOEBA_STRIKE_CRAFT"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	
+	required_component = "BIO_DRIVE_2"
+}

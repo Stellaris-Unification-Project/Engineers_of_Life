@@ -1,0 +1,674 @@
+############################
+#
+# Fallen Empire 'Awakening' Events
+#
+# Written by Martin Anward
+#
+############################
+
+namespace = fme_creators
+
+#################################
+###### TRIBUTE TO CREATORS ######
+#################################
+
+
+#### AFTER 10 YEARS: SMALL RESSOURCE TRIBUTE
+
+country_event = {
+	id = fme_creators.90
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		years = 10
+	}
+	
+	trigger = {
+		NOT = { has_authority = auth_machine_intelligence }
+		has_origin = origin_creators
+		is_mechanical_empire = no
+		is_country_type = default
+		NOT = { has_country_flag = fe_machine_tribute_10 }
+		
+		any_country = {
+			is_valid_fallen_empire_for_task = yes
+			has_authority = auth_machine_intelligence
+			is_enigmatic_to = root
+			has_communications = root		
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }
+		}
+	}
+	
+	immediate = {
+		set_country_flag = fe_machine_tribute_10
+	
+		random_country = {
+			limit = { 
+				is_valid_fallen_empire_for_task = yes
+				has_authority = auth_machine_intelligence
+				is_enigmatic_to = root
+				has_communications = root		
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }				
+			}
+			
+			save_event_target_as = FallenEmpireTributeOrigin
+			root = { country_event = { id = fme_creators.91 } }			
+		}
+	}
+}
+
+country_event = {
+	id = fme_creators.91
+	title = fme_creators.91.name
+	desc = fme_creators.91.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:FallenEmpireTributeOrigin
+		planet_background = event_target:FallenEmpireTributeOrigin
+		graphical_culture = event_target:FallenEmpireTributeOrigin
+		city_level = event_target:FallenEmpireTributeOrigin
+		room = event_target:FallenEmpireTributeOrigin.ruler
+	}
+	
+	option = {
+		name = fme_creators.91.a
+		add_resource = { alloys = 1000 }
+		add_resource = { consumer_goods = 1000 }
+		add_resource = { food = 750 }
+		add_resource = { energy = 750 }
+		add_resource = { minerals = 750 }	
+	}
+}
+
+#### AFTER 25 YEARS: 3 TECHNOLOGIES (Physics, Society, Engineering)
+
+country_event = {
+	id = fme_creators.92
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		years = 25
+	}
+	
+	trigger = {
+		NOT = { has_authority = auth_machine_intelligence }
+		has_origin = origin_creators
+		is_mechanical_empire = no
+		is_country_type = default
+		NOT = { has_country_flag = fe_machine_tribute_25 }
+		
+		any_country = {
+			is_valid_fallen_empire_for_task = yes
+			has_authority = auth_machine_intelligence
+			is_enigmatic_to = root
+			has_communications = root		
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }
+		}
+	}
+	
+	immediate = {
+		set_country_flag = fe_machine_tribute_25
+	
+		random_country = {
+			limit = { 
+				is_valid_fallen_empire_for_task = yes
+				has_authority = auth_machine_intelligence
+				is_enigmatic_to = root
+				has_communications = root
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }				
+			}
+			
+			save_event_target_as = FallenEmpireTributeOrigin
+			root = { country_event = { id = fme_creators.93 } }			
+		}
+	}
+}
+
+country_event = {
+	id = fme_creators.93
+	title = fme_creators.93.name
+	desc = fme_creators.93.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:FallenEmpireTributeOrigin
+		planet_background = event_target:FallenEmpireTributeOrigin
+		graphical_culture = event_target:FallenEmpireTributeOrigin
+		city_level = event_target:FallenEmpireTributeOrigin
+		room = event_target:FallenEmpireTributeOrigin.ruler
+	}
+	
+	option = {
+		name = fme_creators.93.a
+		give_technology = { tech = tech_experimental_subspace_navigation }
+		give_technology = { tech = tech_terrestrial_sculpting }
+		give_technology = { tech = tech_modular_engineering }
+	}
+}
+
+#### AFTER 50 YEARS: SMALL FE FLEET (1 Battlecruiser, 3 Escorts)
+
+country_event = {
+	id = fme_creators.94
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		years = 50
+	}
+	
+	trigger = {
+		NOT = { has_authority = auth_machine_intelligence }
+		has_origin = origin_creators
+		is_mechanical_empire = no
+		is_country_type = default
+		NOT = { has_country_flag = fe_machine_tribute_50 }
+		
+		any_country = {
+			is_valid_fallen_empire_for_task = yes
+			has_authority = auth_machine_intelligence
+			is_enigmatic_to = root
+			has_communications = root		
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }
+		}
+	}
+	
+	immediate = {
+		set_country_flag = fe_machine_tribute_50
+	
+		random_country = {
+			limit = { 
+				is_valid_fallen_empire_for_task = yes
+				has_authority = auth_machine_intelligence
+				is_enigmatic_to = root
+				has_communications = root
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }				
+			}
+			
+			save_event_target_as = FallenEmpireTributeOrigin
+			root = { country_event = { id = fme_creators.95 } }			
+		}
+	}
+}
+
+country_event = {
+	id = fme_creators.95
+	title = fme_creators.95.name
+	desc = fme_creators.95.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:FallenEmpireTributeOrigin
+		planet_background = event_target:FallenEmpireTributeOrigin
+		graphical_culture = event_target:FallenEmpireTributeOrigin
+		city_level = event_target:FallenEmpireTributeOrigin
+		room = event_target:FallenEmpireTributeOrigin.ruler
+	}
+	
+	option = {
+		name = fme_creators.95.a
+		hidden_effect = {
+			capital_scope = {
+				create_fleet = {
+					name = "Custodian Protection Asset Alpha"
+					effect = {
+						set_owner = event_target:FallenEmpireTributeOrigin # For ship names
+						while = {
+							count = 1
+							create_fallen_empire_large_ship = yes
+						}
+						while = {
+							count = 3
+							create_fallen_empire_small_ship = yes
+						}
+						set_location = {
+							target = prev
+							distance = 45
+							angle = random
+						}
+						set_owner = root
+					}
+				}
+			}
+		}
+	}
+}
+
+#### AFTER 75 YEARS: MEDIUM RESSOURCE TRIBUTE
+
+country_event = {
+	id = fme_creators.96
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		years = 75
+	}
+	
+	trigger = {
+		NOT = { has_authority = auth_machine_intelligence }
+		has_origin = origin_creators
+		is_mechanical_empire = no
+		is_country_type = default
+		NOT = { has_country_flag = fe_machine_tribute_75 }
+		
+		any_country = {
+			is_valid_fallen_empire_for_task = yes
+			has_authority = auth_machine_intelligence
+			is_enigmatic_to = root
+			has_communications = root		
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }
+		}
+	}
+	
+	immediate = {
+		set_country_flag = fe_machine_tribute_75
+	
+		random_country = {
+			limit = { 
+				is_valid_fallen_empire_for_task = yes
+				has_authority = auth_machine_intelligence
+				is_enigmatic_to = root
+				has_communications = root		
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }				
+			}
+			
+			save_event_target_as = FallenEmpireTributeOrigin
+			root = { country_event = { id = fme_creators.97 } }			
+		}
+	}
+}
+
+country_event = {
+	id = fme_creators.97
+	title = fme_creators.97.name
+	desc = fme_creators.97.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:FallenEmpireTributeOrigin
+		planet_background = event_target:FallenEmpireTributeOrigin
+		graphical_culture = event_target:FallenEmpireTributeOrigin
+		city_level = event_target:FallenEmpireTributeOrigin
+		room = event_target:FallenEmpireTributeOrigin.ruler
+	}
+	
+	option = {
+		name = fme_creators.97.a
+		add_resource = { alloys = 2500 }
+		add_resource = { consumer_goods = 2500 }
+		add_resource = { food = 1500 }
+		add_resource = { energy = 1500 }
+		add_resource = { minerals = 1500 }	
+	}
+}
+
+#### AFTER 100 YEARS: 3 RANDOM TECHNOLOGIES (Physics, Society, Engineering)
+
+country_event = {
+	id = fme_creators.98
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		years = 100
+	}
+	
+	trigger = {
+		NOT = { has_authority = auth_machine_intelligence }
+		has_origin = origin_creators
+		is_mechanical_empire = no
+		is_country_type = default
+		NOT = { has_country_flag = fe_machine_tribute_100 }
+		
+		any_country = {
+			is_valid_fallen_empire_for_task = yes
+			has_authority = auth_machine_intelligence
+			is_enigmatic_to = root
+			has_communications = root		
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }
+		}
+	}
+	
+	immediate = {
+		set_country_flag = fe_machine_tribute_100
+	
+		random_country = {
+			limit = { 
+				is_valid_fallen_empire_for_task = yes
+				has_authority = auth_machine_intelligence
+				is_enigmatic_to = root
+				has_communications = root
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }				
+			}
+			
+			save_event_target_as = FallenEmpireTributeOrigin
+			root = { country_event = { id = fme_creators.99 } }			
+		}
+	}
+}
+
+country_event = {
+	id = fme_creators.99
+	title = fme_creators.99.name
+	desc = fme_creators.99.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:FallenEmpireTributeOrigin
+		planet_background = event_target:FallenEmpireTributeOrigin
+		graphical_culture = event_target:FallenEmpireTributeOrigin
+		city_level = event_target:FallenEmpireTributeOrigin
+		room = event_target:FallenEmpireTributeOrigin.ruler
+	}
+	
+	option = {
+		name = fme_creators.99.a
+		give_technology = { tech = tech_synchronized_defences }
+		give_technology = { tech = tech_climate_restoration }
+		give_technology = { tech = tech_synthetic_leaders }
+	}
+}
+
+#### AFTER 150 YEARS: MEDIUM FE FLEET (2 Battlecruisers, 6 Escorts)
+
+country_event = {
+	id = fme_creators.100
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		years = 150
+	}
+	
+	trigger = {
+		NOT = { has_authority = auth_machine_intelligence }
+		has_origin = origin_creators
+		is_mechanical_empire = no
+		is_country_type = default
+		NOT = { has_country_flag = fe_machine_tribute_150 }
+		
+		any_country = {
+			is_valid_fallen_empire_for_task = yes
+			has_authority = auth_machine_intelligence
+			is_enigmatic_to = root
+			has_communications = root		
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }
+		}
+	}
+	
+	immediate = {
+		set_country_flag = fe_machine_tribute_150
+	
+		random_country = {
+			limit = { 
+				is_valid_fallen_empire_for_task = yes
+				has_authority = auth_machine_intelligence
+				is_enigmatic_to = root
+				has_communications = root
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }				
+			}
+			
+			save_event_target_as = FallenEmpireTributeOrigin
+			root = { country_event = { id = fme_creators.101 } }			
+		}
+	}
+}
+
+country_event = {
+	id = fme_creators.101
+	title = fme_creators.101.name
+	desc = fme_creators.101.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:FallenEmpireTributeOrigin
+		planet_background = event_target:FallenEmpireTributeOrigin
+		graphical_culture = event_target:FallenEmpireTributeOrigin
+		city_level = event_target:FallenEmpireTributeOrigin
+		room = event_target:FallenEmpireTributeOrigin.ruler
+	}
+	
+	option = {
+		name = fme_creators.101.a
+		hidden_effect = {
+			capital_scope = {
+				create_fleet = {
+					name = "Custodian Protection Asset Beta"
+					effect = {
+						set_owner = event_target:FallenEmpireTributeOrigin # For ship names
+						while = {
+							count = 2
+							create_fallen_empire_large_ship = yes
+						}
+						while = {
+							count = 6
+							create_fallen_empire_small_ship = yes
+						}
+						set_location = {
+							target = prev
+							distance = 45
+							angle = random
+						}
+						set_owner = root
+					}
+				}
+			}
+		}
+	}
+}
+
+#### AFTER 200 YEARS: FE TECHNOLOGY (SHIELDS, THRUSTERS, JUMP ENGINE ETC.)
+
+country_event = {
+	id = fme_creators.102
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		years = 200
+	}
+	
+	trigger = {
+		NOT = { has_authority = auth_machine_intelligence }
+		has_origin = origin_creators
+		is_mechanical_empire = no
+		is_country_type = default
+		NOT = { has_country_flag = fe_machine_tribute_200 }
+		
+		any_country = {
+			is_valid_fallen_empire_for_task = yes
+			has_authority = auth_machine_intelligence
+			is_enigmatic_to = root
+			has_communications = root		
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }
+		}
+	}
+	
+	immediate = {
+		set_country_flag = fe_machine_tribute_200
+	
+		random_country = {
+			limit = { 
+				is_valid_fallen_empire_for_task = yes
+				has_authority = auth_machine_intelligence
+				is_enigmatic_to = root
+				has_communications = root
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }				
+			}
+			
+			save_event_target_as = FallenEmpireTributeOrigin
+			root = { country_event = { id = fme_creators.103 } }			
+		}
+	}
+}
+
+country_event = {
+	id = fme_creators.103
+	title = fme_creators.103.name
+	desc = fme_creators.103.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:FallenEmpireTributeOrigin
+		planet_background = event_target:FallenEmpireTributeOrigin
+		graphical_culture = event_target:FallenEmpireTributeOrigin
+		city_level = event_target:FallenEmpireTributeOrigin
+		room = event_target:FallenEmpireTributeOrigin.ruler
+	}
+	
+	option = {
+		name = fme_creators.103.a
+		random_list = {
+			33 = {
+				give_technology = { tech = tech_dark_matter_deflector }
+			}
+			33 = {
+				give_technology = { tech = tech_dark_matter_power_core }
+			}
+			33 = {
+				give_technology = { tech = tech_dark_matter_propulsion }
+			}
+		}
+	}
+}
+
+#### AFTER 225 YEARS: LARGE FE FLEET (6 Battlecruisers, 18 Escorts)
+
+country_event = {
+	id = fme_creators.104
+	title = OK
+	desc = OK
+	
+	hide_window = yes
+	
+	mean_time_to_happen = {
+		years = 225
+	}
+	
+	trigger = {
+		NOT = { has_authority = auth_machine_intelligence }
+		has_origin = origin_creators
+		is_mechanical_empire = no
+		is_country_type = default
+		NOT = { has_country_flag = fe_machine_tribute_225 }
+		
+		any_country = {
+			is_valid_fallen_empire_for_task = yes
+			has_authority = auth_machine_intelligence
+			is_enigmatic_to = root
+			has_communications = root		
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+			NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }
+		}
+	}
+	
+	immediate = {
+		set_country_flag = fe_machine_tribute_225
+	
+		random_country = {
+			limit = { 
+				is_valid_fallen_empire_for_task = yes
+				has_authority = auth_machine_intelligence
+				is_enigmatic_to = root
+				has_communications = root
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
+				NOT = { has_opinion_modifier = { who = root modifier = opinion_accepted_fallen_empire_request } }				
+			}
+			
+			save_event_target_as = FallenEmpireTributeOrigin
+			root = { country_event = { id = fme_creators.105 } }			
+		}
+	}
+}
+
+country_event = {
+	id = fme_creators.105
+	title = fme_creators.105.name
+	desc = fme_creators.105.desc
+	
+	is_triggered_only = yes
+	diplomatic = yes
+	
+	picture_event_data = {
+		portrait = event_target:FallenEmpireTributeOrigin
+		planet_background = event_target:FallenEmpireTributeOrigin
+		graphical_culture = event_target:FallenEmpireTributeOrigin
+		city_level = event_target:FallenEmpireTributeOrigin
+		room = event_target:FallenEmpireTributeOrigin.ruler
+	}
+	
+	option = {
+		name = fme_creators.105.a
+		hidden_effect = {
+			capital_scope = {
+				create_fleet = {
+					name = "Custodian Protection Asset Beta"
+					effect = {
+						set_owner = event_target:FallenEmpireTributeOrigin # For ship names
+						while = {
+							count = 6
+							create_fallen_empire_large_ship = yes
+						}
+						while = {
+							count = 18
+							create_fallen_empire_small_ship = yes
+						}
+						set_location = {
+							target = prev
+							distance = 45
+							angle = random
+						}
+						set_owner = root
+					}
+				}
+			}
+		}
+	}
+}
+

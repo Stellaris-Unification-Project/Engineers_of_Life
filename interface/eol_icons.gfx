@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_spaceport_module_bio_assembly_yard"
+		texturefile = "gfx/interface/icons/modules/spaceport_module_bio_assembly_yard.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ship_part_extradimensional_weapon_red"
+		texturefile = "gfx/interface/icons/ship_parts/ship_part_extradimensional_weapon_red.dds"
+	}
+}

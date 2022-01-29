@@ -1,0 +1,33 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# planet_modifier - applied to planet only when deposit blocker has been cleared
+# constant_modifier - applied to planet always
+# station = station class in orbit to gather
+
+@blocker_high = 10
+@blocker_low = 5
+
+d_cryovats = {
+	icon = d_cryovats
+	time = 150
+
+	is_for_colonizeable = yes
+	category = deposit_cat_blockers
+
+	potential = {
+		always = no
+	}
+
+	on_cleared = {
+		create_pop = { species = owner }
+		create_pop = { species = owner }
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 600
+		}
+	}
+}

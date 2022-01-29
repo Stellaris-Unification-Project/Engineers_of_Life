@@ -1,0 +1,5 @@
+# Creators Origin
+# Main event to finish system setup
+on_game_start_country = {
+		events = { tcol.1 }
+}

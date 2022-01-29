@@ -1,0 +1,31 @@
+#########################
+#
+# EoL Events
+#
+#########################
+
+namespace = eol
+
+### Created new primitive civilization
+
+planet_event = {
+	id = eol.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { 
+			exists = FROM
+			is_ship_size = life_seeder_colonizer
+		} 
+	}
+
+	immediate = {
+		destroy_colony = yes
+	}
+
+	after = {
+		generate_early_primitives_on_planet = yes
+	}
+}

@@ -1,0 +1,121 @@
+#####################################
+#                                   #
+# 	         Void Clouds            #
+#                                   #
+#####################################
+
+# Lesser Space Cloud
+ship_design = {
+	name = "NAME_Eng_Lesser_Cloud_Entity"
+	ship_size = eng_imp_void_cloud_lesser
+	is_event_design = yes
+	hide_size = yes
+
+	section = {
+		template = "eng_imp_lesser_space_cloud_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "IMP_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "IMP_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "IMP_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "IMP_SPACE_CLOUD_LIGHTNING"
+		}
+	}
+	required_component = "PSI_JUMP_DRIVE_1"
+    required_component = "BIO_PROPULSION_2"
+	required_component = "BIO_SENSORS_2"
+}
+
+# Space Cloud
+ship_design = {
+	name = "NAME_Eng_Cloud_Entity"
+	ship_size = eng_imp_void_cloud
+	is_event_design = yes
+	hide_size = yes
+
+	section = {
+		template = "eng_imp_space_cloud_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "IMP_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "IMP_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "IMP_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "IMP_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "LARGE_GUN_05"
+			template = "IMP_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "LARGE_GUN_06"
+			template = "IMP_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "LARGE_GUN_07"
+			template = "IMP_SPACE_CLOUD_LIGHTNING"
+		}
+		component = {
+			slot = "LARGE_GUN_08"
+			template = "IMP_SPACE_CLOUD_LIGHTNING"
+		}
+	}
+	required_component = "PSI_JUMP_DRIVE_1"
+    required_component = "BIO_PROPULSION_2"
+	required_component = "BIO_SENSORS_2"
+}
+
+# Shroud Avatar
+ship_design = {
+	name = "NAME_Eng_Corrupted_Avatar"
+	ship_size = eng_imp_corrupted_avatar
+	is_event_design = yes
+	hide_size = yes
+
+	section = {
+		template = "eng_imp_corrupted_psionic_avatar_section"
+		slot = "mid"
+		
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = "IMP_PSIONIC_BLAST_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_02"
+			template = "IMP_PSIONIC_BLAST_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_03"
+			template = "IMP_PSIONIC_BLAST_1"
+		}
+		component = {
+			slot = "MEDIUM_GUN_04"
+			template = "IMP_PSIONIC_BLAST_1"
+		}
+	}
+	required_component="COMBAT_COMPUTER_LINE_DEFAULT"
+	required_component="SHIP_THRUSTER_1"
+	required_component="SENSOR_1"
+	required_component="PSI_JUMP_DRIVE_1"
+}

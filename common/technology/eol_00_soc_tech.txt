@@ -1,0 +1,161 @@
+# ##################
+# Unique Technologies
+# ##################
+tech_sapient_life_engineering = {
+	# Unlock the ability to build special life seeder colony ships.
+	icon = tech_sapient_life_engineering
+    	cost = @tier5cost1
+	area = society
+	tier = 5
+	category = { biology }
+    	is_rare = yes
+    	prerequisites = { "tech_gene_expressions" "tech_gene_seed_purification" "tech_gene_banks" }
+	weight = @tier5weight1
+
+	## unlock life seeder
+	prereqfor_desc = {
+		ship = {
+			title = "TECH_UNLOCK_LIFESEEDER_CONSTRUCTION_TITLE"
+			desc = "TECH_UNLOCK_LIFESEEDER_CONSTRUCTION_DESC"
+		}
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 10
+			species = {
+				has_trait = trait_natural_sociologists
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 2
+			species = {
+				has_trait = trait_intelligent
+			}
+		}
+		modifier = {
+			factor = 4
+			species = {
+				has_trait = trait_natural_sociologists
+			}
+		}
+	}
+}
+
+tech_bio_engineering_program = {
+	# Unlock the ability to build the Bio Engineering Facility megastructure.
+	icon = tech_bio_engineering_program
+	area = society
+	cost = @tier3cost2
+	tier = 3
+	category = { biology }
+	ai_update_type = all
+	prerequisites = { "tech_society_2" "tech_cloning" "tech_genome_mapping" }
+	#prereqfor_desc = {
+	#	custom = { title = "allow_bio_engineering_facility"	desc = "desc_bio_engineering_facility" }
+	#}
+	weight = @tier3weight3
+	is_rare = yes
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 6
+			is_xenophile = yes
+		}
+		modifier = {
+			factor = 0.2
+			is_xenophobe = yes
+		}
+		modifier = {
+			factor = 2
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_maniacal"
+				}
+		}
+		modifier = {
+			factor = 2
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_spark_of_genius"
+				}
+		}
+		modifier = {
+			factor = 2
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_statecraft"
+				}
+		}
+		modifier = {
+			factor = 4
+				research_leader = {
+					area = society
+					has_trait = "leader_trait_expertise_biology"
+				}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				has_ascension_perk = ap_galactic_wonders_megacorp
+				has_ascension_perk = ap_galactic_wonders_utopia_and_megacorp
+			}
+		}
+		modifier = {
+			factor = 6
+			has_ascension_perk = ap_master_builders
+		}
+		modifier = {
+			factor = @ap_technological_ascendancy_rare_tech
+			has_ascension_perk = ap_technological_ascendancy
+		}
+		modifier = {
+			factor = @federation_perk_factor
+			has_federation = yes
+			federation = {
+				has_federation_perk = rare_tech_boost
+				any_member = { has_technology = tech_bio_engineering_program }
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 0.5
+	}
+}
+
+tech_amoeba_strike_craft_2 = {
+	icon = tech_amoeba_strike_craft_2
+	area = society
+	cost = @tier3cost3
+	tier = 3
+	category = { biology }
+	prerequisites = { "tech_amoeba_strike_craft_1" }
+	ai_update_type = military
+	weight = 1
+	
+	ai_weight = {
+		factor = 0.25
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_xenophile
+		}
+	}
+}

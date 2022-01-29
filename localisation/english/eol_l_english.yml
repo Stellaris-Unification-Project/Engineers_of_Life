@@ -1,0 +1,635 @@
+﻿l_english:
+ ####################################
+ # Misc
+ ####################################
+ 
+ # Origins
+ origin_creators:0 "The Creators"
+ origin_creators_desc:0 "This mysterious civilization once created intelligent life on countless worlds in the galaxy before they vanished for unknown reasons. Their true motives unknown they became nothing more then legends and myths over time until they were forgotten."
+ origin_tooltip_creators_effects:0 "- Start the game with the ability to build §YSeed Ships§!\n- Start on a §YRelic World§! with some special blockers and powerful precursor buildings.\n- The Ancient Caretakers might recognize you...\n"
+ 
+ # Ascension Perks
+ ap_leviathan_engineering:0 "Leviathan Engineering"
+ ap_leviathan_engineering_desc:1 "Leviathan are the most feared creatures in the galaxy. Wherever they wander, they only leave ashes behind. With such powerful creatures on our side our military will be unstoppable."
+ allow_leviathan_engineering:0 "Allows us to breed leviathans"
+ 
+ ap_ultimate_leviathan_engineering:0 "Ultimate Leviathan Engineering"
+ ap_ultimate_leviathan_engineering_desc:1 "With the incredible power of the Stellar Devourer at our hands, we will make our enemies tremble with fear."
+ allow_ultimate_leviathan_engineering:0 "Allows us to breed stellar devourers"
+ 
+ requires_ap_leviathan_engineering:1 "$TRIGGER_FAIL$Requires §Y$ap_leviathan_engineering$§! Ascension Perk."
+ 
+ # Technology
+ TECH_UNLOCK_LIFESEEDER_CONSTRUCTION_TITLE:0 "§HUnlocks Ship Type:§! Seed Ship"
+ TECH_UNLOCK_LIFESEEDER_CONSTRUCTION_DESC:1 "§HSeed Ship§!\nSeed Ships are fully automated ships that start creating new sapient life as soon as they land on a suitable planet and will destruct themself after the process is done."
+ 
+ tech_sapient_life_engineering:0 "Sapient Life Engineering"
+ tech_sapient_life_engineering_desc:1 "With all our abilities in the field of genetics we are now able to build Seed Ships and create new civilizations according to our own ideals."
+ 
+ tech_bio_engineering_program:0 "Bio Engineering Program"
+ tech_bio_engineering_program_desc:0 "The Bio Engineering Program is a government sponsored program for the breeding and taming of spaceborn aliens for the purposes of warfare and border security. The entire wealth of knowledge of our species in the most diverse fields of biology flows together in it."
+ 
+ tech_amoeba_strike_craft_2:0 "Extended Amoeba Breeding Program"
+ tech_amoeba_strike_craft_2_desc:1 "The continuation of the Amoeba Breeding Program enables our researchers to breed even larger space amoebas."
+ 
+ # Ships
+ life_seeder_colonizer:0 "Seed Ship"
+ life_seeder_colonizer_plural:0 "Seed Ships"
+ life_seeder_colonizer_desc:0 "Seed Ships are fully automated ships that start creating new sapient life as soon as they land on a suitable planet and will destruct themself after the process is done."
+ 
+ # Weapons
+ LARGE_BIO_DISRUPTOR:0 "Large Bio Disruptor"
+ LARGE_BIO_DISRUPTOR_DESC:0 "These disruptor weapons are inspired by the natural defense mechanism of the Space Amoebas and Tiyanki."
+ SMALL_BIO_DISRUPTOR:0 "Small Bio Disruptor"
+ SMALL_BIO_DISRUPTOR_DESC:0 "These disruptor weapons are inspired by the natural defense mechanism of the Space Amoebas and Tiyanki."
+ IMPROVED_AMOEBA_STRIKE_CRAFT:0 "Amoeba Flagella"
+ IMPROVED_AMOEBA_STRIKE_CRAFT_DESC:0 "$AMOEBA_STRIKE_CRAFT_1_DESC$"
+ 
+ IMP_ELDER_SPACE_WHALE_WEAPON:0 "Matriarch Beam"
+ IMP_ELDER_SPACE_WHALE_WEAPON_DESC:0 "This powerful beam reaches through whole star system and can destroy even the strongest military ships with a single shot."
+ IMP_ELDER_SPACE_WHALE_SPIKE:0 "Matriarch Spike Cannon"
+ IMP_ELDER_SPACE_WHALE_SPIKE_DESC:0 "The Tiyanki Matriarch can shoot spikes harder then any material we know of out of her body at incredible speed."
+ 
+ IMP_SMALL_CRYSTAL_SHIP_BLUE_LIGHTNING:0 "Small Shard Thrower"
+ IMP_SMALL_CRYSTAL_SHIP_BLUE_LIGHTNING_DESC:0 "$BLUE_CRYSTAL_WEAPON_1_DESC$"
+ IMP_MEDIUM_CRYSTAL_SHIP_BLUE_LIGHTNING:0 "Medium Shard Thrower"
+ IMP_MEDIUM_CRYSTAL_SHIP_BLUE_LIGHTNING_DESC:0 "$BLUE_CRYSTAL_WEAPON_1_DESC$"
+ IMP_LARGE_CRYSTAL_SHIP_BLUE_LIGHTNING:0 "Large Shard Thrower"
+ IMP_LARGE_CRYSTAL_SHIP_BLUE_LIGHTNING_DESC:0 "$BLUE_CRYSTAL_WEAPON_1_DESC$"
+ 
+ IMP_SPACE_CLOUD_LIGHTNING:0 "Cloud Lightning"
+ IMP_SPACE_CLOUD_LIGHTNING_DESC:0 "Utilizing our understanding of the fundamental forces involved in generating the Void Clouds' considerable internal charge to the fullest, the Cloud Lightning weapon system is a potent damage-dealer."
+ 
+ IMP_PSIONIC_BLAST_1:0 "Psionic Blast"
+ IMP_PSIONIC_BLAST_1_DESC:0 "A powerful blast of psionic energy that can destory smaller ships in a single blast."
+ 
+ IMP_SPORE_LAUNCHER:0 "Spore Launcher"
+ IMP_SPORE_LAUNCHER_DESC:0 "The voidspawn launches spores at lightspeed at enemies to pierce both their shields and armor."
+ 
+ # Components
+ BIO_SHIP_AURA_HEAL_PARASITES_CLOUD:0 "Healing Parasites Cloud"
+ BIO_SHIP_AURA_HEAL_PARASITES_CLOUD_DESC:0 "A cloud of parasites that live in symbiosis with their hosts and help healing their wounds."
+ BIO_SHIP_AURA_RAGE_PHEROMONES_CLOUD:0 "Rage Pheromones Cloud"
+ BIO_SHIP_AURA_RAGE_PHEROMONES_CLOUD_DESC:0 "A cloud of pheromones that is released while in battle to make all friendly combatants more powerful in battle."
+ 
+ aura_rage_presence:0 "$offensive_aura$ - Rage Pheromones Cloud"
+ aura_parasites_cloud:0 "$defensive_aura$ - Healing Parasites Cloud"
+ 
+ BIO_DRIVE_2:0 "Bio-Drive"
+ BIO_GATE_DRIVE:0 "Gate-Drive"
+ 
+ BIO_PROPULSION:0 "Bio-Propulsion"
+ BIO_SENSORS:0 "Bio-Sensors"
+ 
+ # Deposits and Blockers
+ d_cryovats:0 "£blocker£ Ancient Cryo Chambers"
+ d_cryovats_desc:0 "These hidden complexes contain a seemingly never ending mass of cryocapsules containing a long forgotten species."
+ 
+ # Relics
+ r_custodian_beacon:0 "Custodian Beacon"
+ r_custodian_beacon_desc:0 "A subspace beacon used to call in reinforcements from the ancient caretakers."
+ eolrelics.2.a.desc:0 "§Y<<LOADING PROTECTION PROTOCOLS>>§!\n\nProtection unit Ceta-7314123-B ready for deployment and awaiting orders."
+ eolrelics.2.b.desc:0 "§Y<<LOADING PROTECTION PROTOCOLS>>§!\n\nProtection unit Gamma-2750856-YA ready for deployment and awaiting orders."
+ eolrelics.2.c.desc:0 "§Y<<LOADING PROTECTION PROTOCOLS>>§!\n\nProtection unit Delta-9742456-D ready for deployment and awaiting orders."
+ eolrelics.2.d.desc:0 "§Y<<LOADING PROTECTION PROTOCOLS>>§!\n\nProtection unit Alpha-1849294-GH ready for deployment and awaiting orders."
+ eolrelics.2.a:0 "Thank you for the support!"
+ relic_summon_custodians:0 "Summon a single custodian battlecruiser"
+ 
+ # Buildings
+ building_ancient_palace_nonfe:0 "Ancient Palace"
+ building_ancient_palace_nonfe_desc:0 "A massive palatial complex built in a different age. The decrepit and abandoned wings are not betrayed by its shining exterior."
+ 
+ # Megastructures
+ bio_engineering_facility_0:0 "Bio Engineering Facility Site"
+ bio_engineering_facility_0_DESC:0 "The construction station serves as the base for the future assembly of a new Bio Engineering Facility."
+ bio_engineering_facility_1:0 "Bio Engineering Facility"
+ bio_engineering_facility_1_DESC:0 "The Bio Engineering Facility houses our top scientists from various fields of biology always busy finding ways to add new creatures to our ever growing army of spaceborne aliens."
+ bio_engineering_facility_1_MEGASTRUCTURE_DETAILS:0 "$bio_engineering_facility_0_MEGASTRUCTURE_DETAILS$"
+ bio_engineering_ready:0 "Breed Creatures"
+ bio_engineering_ready_DESC:0 "Contacts the facility to place an order for new creatures."
+ 
+ bio_engineering_facility_0_MEGASTRUCTURE_DETAILS:3 "The Bio Engineering Facility houses our top scientists from various fields of biology always busy finding ways to add new creatures to our ever growing army of spaceborne aliens."
+ 
+ # Ship Sizes
+ eng_imp_amoeba:0 "Amoeba Hatchling"
+ eng_imp_mother:0 "Amoeba Mother"
+ eng_imp_cente:0 "Amoeba Centenarian"
+ 
+ eng_imp_space_whale_calf:0 "Tiyanki Calf"
+ eng_imp_space_whale_cow:0 "Tiyanki Cow"
+ eng_imp_space_whale_bull:0 "Tiyanki Bull"
+ eng_imp_leviathan_01_elder_tiyanki:0 "Tiyanki Matriarch"
+ 
+ eng_imp_shardlings:0 "Shardling"
+ eng_imp_shards:0 "Shard"
+ eng_imp_quintessence:0 "Quintessence"
+ eng_imp_crystal_station_large:0 "Core"
+ 
+ eng_imp_void_cloud_lesser:0 "Lesser Cloud"
+ eng_imp_void_cloud:0 "Cloud"
+ eng_imp_corrupted_avatar:0 "Avatar"
+ 
+ eng_imp_leviathan_01_voidspawn:0 "Voidspawn"
+ 
+ eng_imp_space_dragon_baby:0 "Drake Hatchling"
+ eng_imp_space_dragon:0 "Drake"
+ 
+ eng_imp_dimensional_horror:0 "Dimensional Horror"
+ 
+ eng_imp_stellar_devourer:0 "Devourer"
+ 
+ # Jobs
+ job_nonfe_protector:0 "Protector"
+ job_nonfe_protector_plural:0 "Protectors"
+ job_nonfe_protector_desc:2 "So that the majority can sleep peacefully and enjoy their lives of extravagance, these rough individuals stand ready in the night to visit violence on those who would do them harm."
+ mod_job_nonfe_protector_add:0 "$job_nonfe_protector$ Jobs"
+ 
+ job_nonfe_overseer:0 "Overseer"
+ job_nonfe_overseer_plural:0 "Overseers"
+ job_nonfe_overseer_desc:1 "The stalwart few who have rejected lives of luxury in favor of public service. It is up to them to oversee and guide the remnants of their ancient civilization."
+ mod_job_nonfe_overseer_add:0 "$job_nonfe_overseer$ Jobs"
+ 
+ # Observation Missions
+ mission_stone_advancement_0:0 "Technological Advancement"
+ mission_stone_advancement_0_desc:3 "Start a project to advance the local civilization into the §HBronze Age§!."
+ advprim.1.name:0 "Primitive Civilization Advanced!"
+ advprim.1.desc:0 "Our effots to advance the primitive civilization on [From.Capital.GetName] have been successful. They advanced beyond the Neolithic Era and into the equivalent of an early Bronze Age. They have started using metalworking and the first written languages have appeared. Cities and larger communities are taking shape, and the aliens have now spread across a significant portion of the [From.Capital.GetPlanetMoon]'s surface."
+ mission_bronze_advancement_1:0 "Technological Advancement"
+ mission_bronze_advancement_1_desc:3 "Start a project to advance the local civilization into the §HIron Age§!."
+ advprim.2.name:0 "Primitive Civilization Advanced!"
+ advprim.2.desc:0 "With our help the Bronze Age aliens of [From.Capital.GetName] have advanced sufficiently enough in their use of metallurgy to be considered an Iron Age civilization. The tools and weapons they make use of are becoming more effective, and the architecture of their cities has become more elaborate. Their civilization has now spread to cover most of the [From.Capital.GetPlanetMoon], and some of their largest cities are home to nearly a million individuals."
+ mission_iron_advancement_2:0 "Technological Advancement"
+ mission_iron_advancement_2_desc:3 "Start a project to advance the local civilization into the §HMedieval Age§!."
+ advprim.3.name:0 "Primitive Civilization Advanced!"
+ advprim.3.desc:0 "After months of preparations the pre-industrial civilization of [From.Capital.GetName] have been silently gifted the plans to construct a working printing press. These machines have enabled them to produce written material in great quantities, resulting in a primitive form of mass communication. A few leading figures within their society have done their best to stifle this innovation, but their efforts have thus far been for naught. New ideas are rapidly spreading across the [From.Capital.GetPlanetMoon] with profound societal effects."
+ mission_medieval_advancement_3:0 "Technological Advancement"
+ mission_medieval_advancement_3_desc:3 "Start a project to advance the local civilization into the §HRenaissance Age§!."
+ advprim.4.name:0 "Primitive Civilization Advanced!"
+ advprim.4.desc:0 "By showing them the recipe for gunpowder the primitive alien civilization on [From.Capital.GetName] was able revolutionize warfare with new large cannons, rendering many of their citadels obsolete. The use of explosives has also benefitted many engineering projects, as troublesome obstacles can now be more easily removed. Even now, their chemists are experimenting with new creative applications for this invention."
+ mission_renaissance_advancement_4:0 "Technological Advancement"
+ mission_renaissance_advancement_4_desc:3 "Start a project to advance the local civilization into the §HSteam Age§!."
+ advprim.5.name:0 "Primitive Civilization Advanced!"
+ advprim.5.desc:0 "Thanks to our agents the primitive alien civilization on [From.Capital.GetName] has unlocked the secrets of the steam engine. This has revolutionized their society in more ways than one - vehicles and machinery making use of this technology can already be seen in their cities, and the first few factories are appearing. This world would appear to be on the brink of industrializing."
+ mission_steam_advancement_5:0 "Technological Advancement"
+ mission_steam_advancement_5_desc:3 "Start a project to advance the local civilization into the §HIndustrial Age§!."
+ advprim.6.name:0 "Primitive Civilization Advanced!"
+ advprim.6.desc:0 "Thanks to our efforts the alien civilization on [From.Capital.GetName] has entered a new era of history, having developed into a fully industrialized society. The dramatic effects of this revolution are felt across the [From.Capital.GetPlanetMoon] - factories have sprung up everywhere, improved medicines have resulted in increased population growth and new scientific innovations are appearing at an alarming regularity."
+ mission_industrial_advancement_6:0 "Technological Advancement"
+ mission_industrial_advancement_6_desc:3 "Start a project to advance the local civilization into the §HMachine Age§!."
+ advprim.7.name:0 "Primitive Civilization Advanced!"
+ advprim.7.desc:0 "Our detection instruments have picked up radio signals emanating from [From.Capital.GetName] - the industrialized alien civilization that lives on this world have evidently started experimenting with wireless transmissions. Elsewhere on the [From.Capital.GetPlanetMoon], reports have come in detailing the launch of their first primitive aircraft. In accordance with our models, their technological progress continues to advance at a rapid pace."
+ mission_machine_advancement_7:0 "Technological Advancement"
+ mission_machine_advancement_7_desc:3 "Start a project to advance the local civilization into the §HAtomic Age§!."
+ advprim.8.name:0 "Primitive Civilization Advanced!"
+ advprim.8.desc:0 "Our efforts for advance the alien civilization on [From.Capital.GetName] have been successful. They have managed to split the atom for the first time! With the discovery of nuclear fission, the first nuclear weapons are inevitably being produced and nuclear power plants are coming online. The [From.GetName] has entered the critical phase where they suddenly possess the means to destroy their own world with the press of a button."
+ mission_atomic_advancement_8:0 "Technological Advancement"
+ mission_atomic_advancement_8_desc:3 "Start a project to advance the local civilization into the §HEarly Space Age§!."
+ advprim.9.name:0 "Primitive Civilization Advanced!"
+ advprim.9.desc:0 "Our long-range tracking systems have detected the first launch of an artificial satellite from the surface of [From.Capital.GetName]. It successfully achieved orbit and marks the start of a budding space program initiated by the [From.Capital.GetPlanetMoon]'s alien civilization. After taking these first tentative steps into space, we can expect them to launch manned missions and, eventually, interplanetary expeditions."
+ 
+ window_head_species_creation:0 "Create a new species"
+ 
+ # Fail Texts
+ CANNOT_ADVANCE_FANATIC_XENOPHOBE:0 "Not possible to technologically advance Primitives that are §H$ethic_fanatic_xenophobe$§!."
+ 
+ # Diplomatic Phrases
+ action.1.desc_999:1 "Biological civilization detected. Initiate custodial proto... Wait! STOP PROTOCOL! STOP PROTOCOL! Initiate special protocol 1 Alpha-1.\n\nMessage follows: Is this.. can this be true? Are.. Are.. Are..\n§R<<ERROR: RESTART SPEECH PROTOCOLS>>§!\n\nAre you the creators!? How is that even possible? Accoding to our historical data your species has gone extinct 2 trillion cycles ago.. How have you survived?\n\nHidden cryo chambers you say? §Y<<UPDATING HISTORICAL DATA ARCHIVE>>§!\n\nThis is a great day for the [contact_empire.GetName] and the whole galaxy! The great creators are finally back!\n\nLet us introduce ourself. We are the [contact_empire.GetName], created 3.576435 million cycles ago by the §R<<ERROR: DATA BLOCK CORRUPTED>>§! in order to protect and preserve your legacy from the §R<<ERROR: DATA BLOCK CORRUPTED>>§! threat.\n\nAre you satisfied with our work creators? No say nothing! We need time to make preparations in order to honor your great archievements! Feel free to pass trough our territory anytime you want.\n\nOh and before we forget it! Take this as a gift from us. With this §YCustodian Beacon§! you can always call for our protection assets to support you in your operations.§!"
+ 
+ fme_creators.91.name:0 "Communication from §H[FallenEmpireTributeOrigin.GetName]§!"
+ fme_creators.91.desc:0 "§Y<<INITIALIZING ASSET TRANSFER>>§!\n\nHello Creators. We have been gathering ressources for you to help rebuild your civilization. We are now ready to transfer them over. Please accept."
+ fme_creators.91.a:0 "Very well, thank you for your help."
+ fme_creators.93.name:0 "Communication from §H[FallenEmpireTributeOrigin.GetName]§!"
+ fme_creators.93.desc:0 "§Y<<INITIALIZING TECHNOLOGY TRANSFER>>§!\n\nHello again Creators. Our analysis has shown that some of your data storages have suffered critical losses. Luckily for you we had backups for some key technologies. Please accept the transfer. We hope this will be helpful to your civilization."
+ fme_creators.93.a:0 "This is great [FallenEmpireTributeOrigin.GetName]. Thank you for this kind gift."
+ fme_creators.95.name:0 "Communication from §H[FallenEmpireTributeOrigin.GetName]§!"
+ fme_creators.95.desc:0 "§Y<<INITIALIZING FLEET TRANSFER>>§!\n\nCreators we have dispatched some of our protection assets for you to use. We have already transmited full control over the ships to your command. Please use them well."
+ fme_creators.95.a:0 "Thank you [FallenEmpireTributeOrigin.GetName]. This will make us stronger."
+ fme_creators.97.name:0 "Communication from §H[FallenEmpireTributeOrigin.GetName]§!"
+ fme_creators.97.desc:0 "§Y<<INITIALIZING ASSET TRANSFER>>§!\n\nHello Creators. We have a new load of critical ressources for you to accelerate your growth. Ressource transfer is ready, you just need to accept."
+ fme_creators.97.a:0 "Very well, thank your for your help."
+ fme_creators.99.name:0 "Communication from §H[FallenEmpireTributeOrigin.GetName]§!"
+ fme_creators.99.desc:0 "§Y<<INITIALIZING TECHNOLOGY TRANSFER>>§!\n\nWe have found more useful technology in our data archives Creators. Please use them to your advantage. This will drastically improve survival chances of your civilization in the unlikely case that §R<<ERROR: DATA BLOCK CORRUPTED>>§! is to threat the galaxy again."
+ fme_creators.99.a:0 "This is great [FallenEmpireTributeOrigin.GetName]. Thank you for this kind gift."
+ fme_creators.101.name:0 "Communication from §H[FallenEmpireTributeOrigin.GetName]§!"
+ fme_creators.101.desc:0 "§Y<<INITIALIZING FLEET TRANSFER>>§!\n\nMore of your protection assets are ready for deployment. With your permission we will beginn transfering those assets now."
+ fme_creators.101.a:0 "Thank you [FallenEmpireTributeOrigin.GetName]. This will make us stronger."
+ fme_creators.103.name:0 "Communication from §H[FallenEmpireTributeOrigin.GetName]§!"
+ fme_creators.103.desc:0 "§Y<<INITIALIZING TECHNOLOGY TRANSFER>>§!\n\nHello Creators. We were finally able to reverse-engineer some of our strongest technologies so that you can use them on your own ships! Please accept transfer now."
+ fme_creators.103.a:0 "This is great [FallenEmpireTributeOrigin.GetName]. Thank you for this kind gift."
+ fme_creators.105.name:0 "Communication from §H[FallenEmpireTributeOrigin.GetName]§!"
+ fme_creators.105.desc:0 "§Y<<INITIALIZING FLEET TRANSFER>>§!\n\nHello Creators. Our scanners show unusual data we can't explain yet. Please take this fleet in case of an dangerous event until we can determine the nature of said anomalies."
+ fme_creators.105.a:0 "This is worrying [FallenEmpireTributeOrigin.GetName]. Thank you for sending us your reinforcements."
+ 
+ # Bio Engineering Facility - Diplomatic Window
+ eolbioengfac.1.name:0 "Bio Engineering Facility Construction"
+ eolbioengfac.1.desc:0 "The initial site will serve as the base for the construction of our new Bio Engineering Facility.\n\nOnce it's finished this facility will provide us with an powerful army of spaceborne creatures."
+ eolbioengfac.1.a:0 "Our enemies won't stand a chance"
+ 
+ eolbioengfac.2.name:0 "Bio Engineering Facility Completed"
+ eolbioengfac.2.desc:0 "Our Bio Engineering Facility has been completed. Our scientists are currently moving into their quarters and will soon start with their work."
+ eolbioengfac.2.a:0 "Soon we can start"
+ 
+ eolbioengfac.3.name:0 "Bio Engineering Facility"
+ eolbioengfac.3.desc:0 "Welcome to the Bio Engineering Facility. The leading research center for biotechnology, genetics and breeding of spaceborne aliens.\n\nWhat can we do for you?"
+ 
+ eolbioengfac.4.name:0 "BEF - Space Amoeba Division"
+ eolbioengfac.4.desc:0 "Welcome to the Space Amoeba Division of the BEF.\n\nThe §YSpace Amoebas§! - the name has stuck as the pronunciation of the proper xeno-taxonomic denominator is too unwieldy for the average citizen - are solitary animals, when left to their own devices. All but the youngest specimens are accompanied by quasi-independent flagella, organisms spawned by the Amoeba and programmed through liquid, RNA-laced secretions to do the bidding of the host. These flagella are capable of manipulating and even attacking objects in an impressive yet restricted range around the host, periodically returning to lodge inside the host Amoeba's body for re-programming.\n\nThere are potential military applications to be found in the regenerative properties of the amoeba's thick hide, or in the flagella's graceful patterns of movement but we can also breed some as reinforcements for our fleets."
+ 
+ eolbioengfac.5.name:0 "BEF - Tiyanki Division"
+ eolbioengfac.5.desc:0 "Welcome to the Tiyanki Division of the BEF.\n\nThe spaceborne lifeforms - which we call "§YTiyanki§!" - are docile creatures. Capable of accessing some lower dimension of subspace, in the wild they roam from system to system with remarkable ease.\n\nThey graze on gases common to the upper layers of many gas giants. It is highly unlikely, to say the least, that this is their only food source, but intake of other nutrients has yet to be observed.\n\nTheir wild versions will not attack unless provoked. They can safely be ignored.\n\nOur combat breed Tiyankis will support our fleets with strong auras."
+ 
+ eolbioengfac.6.name:0 "BEF - Crystal Division"
+ eolbioengfac.6.desc:0 "Welcome to the Crystal Division of the BEF.\n\nThe §YCrystalline Entities§! - the name itself a compromise between rival factions of xeno-biologists and xeno-geologists - are among the strangest creatures we have discovered.\n\nAn earlier and perhaps more descriptive name for them was "silicate-animate matter," as they have little in common with biological life. They are solitary beings, each individual Crystal Sovereign rarely seen with more than a Sentinel and a smaller Cohort entity. Aside from the Cohort and Sentinel clearly being subservient to the Sovereign of the group, the subtle nuances of the Crystalline Entities' socio-hierarchical relationships are lost on us.\n\nThe Entities do not seem to mate, and we have yet to observe any Crystals in the wild that are recognizably older or younger than others. Contrary to an early hypothesis, the shifts in hue between individual Crystalline Entities seem to be related not to their age but to their latent internal charge - which can be violently unleashed and are a powerful weapon - and it appear as if though sporadic fluctuations in this charge alter the refractive properties of the Crystal."
+ 
+ eolbioengfac.7.name:0 "BEF - Void Cloud Division"
+ eolbioengfac.7.desc:0 "Welcome to the Void Cloud Division of the BEF.\n\nThe §YVoid Clouds§! are, as far as our researchers can tell, among the oldest entities in the universe. They seem to have originated just a scant few billion years after matter as we know it first appeared, the tremendous forces of the young cosmos making something out of nothing. They would have been stars once, but were not.\n\nExplaining their apparent animal intelligence is more difficult, but the answer might lie in the abnormally strong electromagnetic fields that keep them together - another product of their primordial beginnings. It is not inconceivable that, given enough time, the circulation of its strange stardust and gravitic fields aligned in a flexible approximation of neural pathways.\n\nMoreover, the Clouds seem to be receiving impulses from one another, if not outright communicating, lightyears apart. Quantum entanglement is suspected to play a role in this phenomenon.\n\nVoid Clouds are strong opponents and would make a formidable addition to our fleets"
+ 
+ eolbioengfac.8.name:0 "BEF - Voidspawn Division"
+ eolbioengfac.8.desc:0 "Welcome to the Voidspawn Division of the BEF.\n\n§YVoidspawns§! are amongst the most fearsome creatures in the galaxy, they lay their planet-sized eggs in orbit of a star, where they then incubate for thousands of years, sometimes even long enough to develop an atmosphere and organic life.\n\nThey feed off of living matter and adult Voidspawns are said to exert a strange influence on all living things.\n\nThere are no confirmed reports of a grown void spawn that was actually defeated in combat."
+ 
+ eolbioengfac.9.name:0 "BEF - Ether Drake Division"
+ eolbioengfac.9.desc:0 "Welcome to the Ether Drake Division of the BEF.\n\nBy all accounts, the §YEther Drakes§! predate all galactic civilization. There once were multitudes, but their race has been wasting away for eons.\n\nThey are ill-suited to life, here and now. Something about the physical laws of the universe does not agree with them, like they evolved in another reality. They did, in fact. We believe that they are but the last dregs of a universe that ended before ours began, the sole survivors of some "big crunch.""
+ 
+ eolbioengfac.10.name:0 "BEF - Dimensional Horror Division"
+ eolbioengfac.10.desc:0 "Welcome to the Dimensional Horror Division of the BEF.\n\nThe §YDimensional Horror§! is a creature of pure malice, born in a dimension that bears more than a striking resemblance to the realm of Hell as described by many galactic religions. What we are seeing is but a small part of a greater whole - the creature in its entirety is multitudes larger.\n\nIt is very fortunate that it was unable to complete its transition into our universe. Had it been successful, the creature would likely have consumed all life in the galaxy by now.\n\nAfter years of research we are now able to safely summon more specimen of this creature. Due to its nature it can't travel hyperlanes but it could use the gateway network and wormholes to travel and help us defend our territory."
+ 
+ eolbioengfac.11.name:0 "BEF - Stellar Devourer Division"
+ eolbioengfac.11.desc:0 "Welcome to the Stellar Devourer Division of the BEF.\n\nThe star-feaster is a rare breed. A new type of beast of unknown origin. The accounts we have collected are few and sparse with intel. Few sources even have firsthand experience with the thing.\n\nAll our data points to the same fact, however: it is a terror that brings nothing but ruin.\n\nThe Stellar Devourer is capable of feeding off of fusion itself. Our very educated guess is that its biology is the result of some outer-dimensional fusing of dark matter and solar matter. It dives into stars, feasting on their innards in order to fuel its own, internal fusion reactor. It brings death to all systems it reaches. Either they shatter like ice after its banquet, or they burn from being exposed to a second sun from within the being's belly.\n\nIt wants to feed, and it will stop at nothing to get its share. When you gaze at it, what you see is a survivor's raw fury.\n\nWith our own Stellar Devourer we will be able to destroy whole star systems."
+ 
+ eolbioengfac.12.name:0 "BEF - Space Amoeba Division"
+ eolbioengfac.12.desc:0 "Amoeba Hatchlings are the smallest units of Space Amoebas. Physically they are similiar to the Amoeba Flagellas but they can act independently from other Amoebas.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y180§!\n£ship_stats_hitpoints£ Hull: §Y680§!\n\n£ship_stats_speed£ Speed: §Y270§!\n£ship_stats_evasion£ Evasion: §Y75.0§!%\n£ship_stats_damage£ Damage: §Y16.50§! / £time£\n\n£navy_size£ Ship Size: §Y1§! (Corvette)\n£ship_stats_maintenance£ Upkeep: £food£ §Y0.2§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y75§! days"
+ 
+ eolbioengfac.13.name:0 "BEF - Space Amoeba Division"
+ eolbioengfac.13.desc:0 "Amoeba Mothers are the most frequent kind of Space Amoebas in the wild. They are host to a large number of Amoeba Flagellas and are comparable in strength to a destroyer or cruiser.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y1500§!\n£ship_stats_hitpoints£ Hull: §Y1500§!\n\n£ship_stats_speed£ Speed: §Y230§!\n£ship_stats_evasion£ Evasion: §Y35.0§!%\n£ship_stats_damage£ Damage: §Y82.17§! / £time£\n\n£navy_size£ Ship Size: §Y4§! (Cruiser)\n£ship_stats_maintenance£ Upkeep: £food£ §Y0.6§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y280§! days"
+ 
+ eolbioengfac.14.name:0 "BEF - Space Amoeba Division"
+ eolbioengfac.14.desc:0 "Amoeba Centenarians are the largest kind of Space Amoebas and are very rare to observe in the wild. Only the strongest Amoebas can grow to such strength. They can easily face a Battleship in combat.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y4100§!\n£ship_stats_hitpoints£ Hull: §Y3500§!\n\n£ship_stats_speed£ Speed: §Y200§!\n£ship_stats_evasion£ Evasion: §Y11.0§!%\n£ship_stats_damage£ Damage: §Y668.36§! / £time£\n\n£navy_size£ Ship Size: §Y8§! (Battleship)\n£ship_stats_maintenance£ Upkeep: £food£ §Y1.2§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y540§! days"
+ 
+ eolbioengfac.15.name:0 "BEF - Tiyanki Division"
+ eolbioengfac.15.desc:0 "Tiyanki Calfs are young specimen that are still in their growing phase. On the battlefield their combat strength is similar to that of a corvette.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y1000§!\n£ship_stats_hitpoints£ Hull: §Y1200§!\n\n£ship_stats_speed£ Speed: §Y235§!\n£ship_stats_evasion£ Evasion: §Y32.0§!%\n£ship_stats_damage£ Damage: §Y19.68§! / £time£\n\n£navy_size£ Ship Size: §Y1§! (Corvette)\n£ship_stats_maintenance£ Upkeep: £food£ §Y0.25§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y75§! days"
+ 
+ eolbioengfac.16.name:0 "BEF - Tiyanki Division"
+ eolbioengfac.16.desc:0 "Tiyanki Cows are mature female Tiyankis. They give growth to Tiyanki Calfs are mainly caring for the newborn. They field a powerful aura that heals nearby ships.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y2100§!\n£ship_stats_hitpoints£ Hull: §Y4200§!\n\n£ship_stats_speed£ Speed: §Y210§!\n£ship_stats_evasion£ Evasion: §Y10.0§!%\n£ship_stats_damage£ Damage: §Y58.66§! / £time£\n\n£navy_size£ Ship Size: §Y2§! (Destroyer)\n£ship_stats_maintenance£ Upkeep: £food£ §Y0.4§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y150§! days"
+ 
+ eolbioengfac.17.name:0 "BEF - Tiyanki Division"
+ eolbioengfac.17.desc:0 "Tiyanki Bulls are mature male Tiyankis. They defend their herd from outside harm and field powerful auras that enrages other creatures around them and makes them stronger in battle.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y2100§!\n£ship_stats_hitpoints£ Hull: §Y4200§!\n\n£ship_stats_speed£ Speed: §Y210§!\n£ship_stats_evasion£ Evasion: §Y10.0§!%\n£ship_stats_damage£ Damage: §Y58.66§! / £time£\n\n£navy_size£ Ship Size: §Y2§! (Destroyer)\n£ship_stats_maintenance£ Upkeep: £food£ §Y0.4§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y150§! days"
+ 
+ eolbioengfac.18.name:0 "BEF - Tiyanki Division"
+ eolbioengfac.18.desc:0 "The Tiyanki Matriarch is the most powerful Tiyanki known. There are no Tiyanki Patriarchs because the male specimen usually don't grow that old. A fully grown Matriarch can battle whole fleets without a problem and it also fields both auras of the Tiyanki Bulls and Cows.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y14100§!\n£ship_stats_hitpoints£ Hull: §Y125000§!\n\n£ship_stats_speed£ Speed: §Y185§!\n£ship_stats_evasion£ Evasion: §Y15.0§!%\n£ship_stats_damage£ Damage: §Y680.86§! / £time£\n\n£navy_size£ Ship Size: §Y16§! (Titan)\n£ship_stats_maintenance£ Upkeep: £food£ §Y5.0§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y5400§! days"
+ 
+ eolbioengfac.19.name:0 "BEF - Crystal Division"
+ eolbioengfac.19.desc:0 "The shardlings are the smallest kind of crystalline entities currently known. They have weak armor but are cheaper to grow then most of their organic counterparts.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y200§!\n£ship_stats_hitpoints£ Hull: §Y1750§!\n\n£ship_stats_speed£ Speed: §Y250§!\n£ship_stats_evasion£ Evasion: §Y65.0§!%\n£ship_stats_damage£ Damage: §Y18.11§! / £time£\n\n£navy_size£ Ship Size: §Y1§! (Corvette)\n£ship_stats_maintenance£ Upkeep: £minerals£ §Y0.15§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y85§! days"
+ 
+ eolbioengfac.20.name:0 "BEF - Crystal Division"
+ eolbioengfac.20.desc:0 "A shard can match a destroyer in battle. They have weak armor but are cheaper to grow then most of their organic counterparts.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y400§!\n£ship_stats_hitpoints£ Hull: §Y3100§!\n\n£ship_stats_speed£ Speed: §Y220§!\n£ship_stats_evasion£ Evasion: §Y35.0§!%\n£ship_stats_damage£ Damage: §Y39.24§! / £time£\n\n£navy_size£ Ship Size: §Y2§! (Destroyer)\n£ship_stats_maintenance£ Upkeep: £minerals£ §Y0.25§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y175§! days"
+ 
+ eolbioengfac.21.name:0 "BEF - Crystal Division"
+ eolbioengfac.21.desc:0 "The quintessences are the largest kind of crystalline entities currently known. They have weak armor but are cheaper to grow then most of their organic counterparts.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y800§!\n£ship_stats_hitpoints£ Hull: §Y7700§!\n\n£ship_stats_speed£ Speed: §Y195§!\n£ship_stats_evasion£ Evasion: §Y10.0§!%\n£ship_stats_damage£ Damage: §Y96.59§! / £time£\n\n£navy_size£ Ship Size: §Y4§! (Cruiser)\n£ship_stats_maintenance£ Upkeep: £minerals£ §Y0.4§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y295§! days"
+ 
+ eolbioengfac.22.name:0 "BEF - Crystal Division"
+ eolbioengfac.22.desc:0 "The crystal core is like the mothership of all crystalline entities. It is unmatched in strength by any of the other crystals but can't travel hyperlanes and either needs to stay in its original system or travel by using gateways.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y2000§!\n£ship_stats_hitpoints£ Hull: §Y61100§!\n\n£ship_stats_speed£ Speed: §Y95§!\n£ship_stats_evasion£ Evasion: §Y5.0§!%\n£ship_stats_damage£ Damage: §Y434.70§! / £time£\n\n£navy_size£ Ship Size: §Y8§! (Battleship)\n£ship_stats_maintenance£ Upkeep: £minerals£ §Y10.0§! / £rare_crystals£ §Y3.0§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y1000§! days"
+ 
+ eolbioengfac.23.name:0 "BEF - Void Cloud Division"
+ eolbioengfac.23.desc:0 "The crystal core is like the mothership of all crystalline entities. It is unmatched in strength by any of the other crystals but can't travel hyperlanes and either needs to stay in its original system or travel by using gateways.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y3000§!\n£ship_stats_armor£ Armor: §Y0§!\n£ship_stats_hitpoints£ Hull: §Y1600§!\n\n£ship_stats_speed£ Speed: §Y215§!\n£ship_stats_evasion£ Evasion: §Y65.0§!%\n£ship_stats_damage£ Damage: §Y166.83§! / £time£\n\n£navy_size£ Ship Size: §Y4§! (Cruiser)\n£ship_stats_maintenance£ Upkeep: £energy£ §Y0.45§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y270§! days"
+ 
+ eolbioengfac.24.name:0 "BEF - Void Cloud Division"
+ eolbioengfac.24.desc:0 "The crystal core is like the mothership of all crystalline entities. It is unmatched in strength by any of the other crystals but can't travel hyperlanes and either needs to stay in its original system or travel by using gateways.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y12000§!\n£ship_stats_armor£ Armor: §Y0§!\n£ship_stats_hitpoints£ Hull: §Y12000§!\n\n£ship_stats_speed£ Speed: §Y195§!\n£ship_stats_evasion£ Evasion: §Y40.0§!%\n£ship_stats_damage£ Damage: §Y533.86§! / £time£\n\n£navy_size£ Ship Size: §Y8§! (Battleship)\n£ship_stats_maintenance£ Upkeep: £energy£ §Y0.75§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y800§! days"
+ 
+ eolbioengfac.25.name:0 "BEF - Void Cloud Division"
+ eolbioengfac.25.desc:0 "The crystal core is like the mothership of all crystalline entities. It is unmatched in strength by any of the other crystals but can't travel hyperlanes and either needs to stay in its original system or travel by using gateways.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y65000§!\n£ship_stats_armor£ Armor: §Y0§!\n£ship_stats_hitpoints£ Hull: §Y61100§!\n\n£ship_stats_speed£ Speed: §Y175§!\n£ship_stats_evasion£ Evasion: §Y25.0§!%\n£ship_stats_damage£ Damage: §Y605.37§! / £time£\n\n£navy_size£ Ship Size: §Y16§! (Titan)\n£ship_stats_maintenance£ Upkeep: £energy£ §Y1.55§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y1600§! days"
+ 
+ eolbioengfac.26.name:0 "BEF - Voidspawn Division"
+ eolbioengfac.26.desc:0 "§YVoidspawns§! are amongst the most fearsome creatures in the galaxy, they lay their planet-sized eggs in orbit of a star, where they then incubate for thousands of years, sometimes even long enough to develop an atmosphere and organic life.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y111100§!\n£ship_stats_hitpoints£ Hull: §Y100000§!\n\n£ship_stats_speed£ Speed: §Y120§!\n£ship_stats_evasion£ Evasion: §Y25.0§!%\n£ship_stats_damage£ Damage: §Y776.25§! / £time£\n\n£navy_size£ Ship Size: §Y16§! (Titan)\n£ship_stats_maintenance£ Upkeep: £food£ §Y4.5§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y5400§! days"
+ 
+ eolbioengfac.27.name:0 "BEF - Ether Drake Division"
+ eolbioengfac.27.desc:0 "Young Ether Drakes are weaker then their mature counterparts but are still among the deadliest predators in the galaxy. This beast can easily go toe to toe with a battleship in combat.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y9440§!\n£ship_stats_hitpoints£ Hull: §Y10000§!\n\n£ship_stats_speed£ Speed: §Y200§!\n£ship_stats_evasion£ Evasion: §Y25.0§!%\n£ship_stats_damage£ Damage: §Y821.17§! / £time£\n\n£navy_size£ Ship Size: §Y8§! (Battleship)\n£ship_stats_maintenance£ Upkeep: £food£ §Y4§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y1800§! days"
+ 
+ eolbioengfac.28.name:0 "BEF - Ether Drake Division"
+ eolbioengfac.28.desc:0 "Ether drakes are among the most feared predators. They can even destroy a Titan in battle.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y0§!\n£ship_stats_armor£ Armor: §Y104440§!\n£ship_stats_hitpoints£ Hull: §Y150000§!\n\n£ship_stats_speed£ Speed: §Y160§!\n£ship_stats_evasion£ Evasion: §Y25.0§!%\n£ship_stats_damage£ Damage: §Y858.50§! / £time£\n\n£navy_size£ Ship Size: §Y16§! (Titan)\n£ship_stats_maintenance£ Upkeep: £food£ §Y6§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y5400§! days"
+ 
+ eolbioengfac.29.name:0 "BEF - Dimensional Horror Division"
+ eolbioengfac.29.desc:0 "The §YDimensional Horror§! is a creature of pure malice, born in a dimension that bears more than a striking resemblance to the realm of Hell as described by many galactic religions. What we are seeing is but a small part of a greater whole - the creature in its entirety is multitudes larger. It can't travel hyperlanes and either needs to stay in its original system or travel by using gateways.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y100000§!\n£ship_stats_armor£ Armor: §Y100000§!\n£ship_stats_hitpoints£ Hull: §Y100000§!\n\n£ship_stats_speed£ Speed: §Y80§!\n£ship_stats_evasion£ Evasion: §Y0.0§!%\n£ship_stats_damage£ Damage: §Y932.53§! / £time£\n\n£navy_size£ Ship Size: §Y32§! (Colossus)\n£ship_stats_maintenance£ Upkeep: £food£ §Y4§! / £sr_dark_matter£ §Y1§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y5400§! days"
+ 
+ eolbioengfac.30.name:0 "BEF - Stellar Devourer Division"
+ eolbioengfac.30.desc:0 "The star-feaster is a rare breed. A new type of beast of unknown origin. The accounts we have collected are few and sparse with intel. Few sources even have firsthand experience with the thing. The Devourer can, like it's name suggests, devour whole suns to make them go supernova.\n\nShip Stats (Without upgrades):\n\n£ship_stats_shield£ Shields: §Y200000§!\n£ship_stats_armor£ Armor: §Y0§!\n£ship_stats_hitpoints£ Hull: §Y200000§!\n\n£ship_stats_speed£ Speed: §Y187§!\n£ship_stats_evasion£ Evasion: §Y40.0§!%\n£ship_stats_damage£ Damage: §Y3507.28§! / £time£\n\n£navy_size£ Ship Size: §Y32§! (Colossus)\n£ship_stats_maintenance£ Upkeep: £energy£ §Y75.0§!\n£ship_stats_build_time£ Build Time/Cooldown: §Y9000§! days"
+ 
+ # Startscreen Texts
+ START_SCREEN_CREATORS:0 "Long ago, in ancient times, our ancestors were the very first to set out to explore the galaxy. But to their disappointment, they found nothing. Everywhere only empty, dead worlds devoid from any life.\n\nAfter they explored every inch and found all of the secrets the galaxy had to offer, they asked themselves: What now?\n\nWithout a task, without a goal, life seemed pointless. This was the point at which our ancestors made a decision that would change the galaxy for all time. They started planting new life planet by planet and thus became the creators of countless civilizations.\n\nFor thousands of years they just watched as their creations were growing and learning, sometimes guiding them in times of need or protecting them from outside harm.\n\nBut one day an unknown threat arrived from outside of the galaxy, invading their childrens homeworlds, murdering them and burning down what they had build. Our Ancestors fought hard against this threat but could not stop it. In an last attempt they sacrificed their great empire to defeat the invaders so that their children could live on. The once so great creators vanished... but some of our kind survived in cryostasis for billions of year. Now is the time to awaken and rebuild our legacy to protect and guide those who we once created."
+ 
+ # Bio Engineering Event Options
+ 
+ # Amoebas
+ eolbioengfac.3.a:0 "Space Amoebas"
+ eolbioengfac.3.a.tooltip:0 "Breed Space Amoebas"
+ 
+ eolbioengfac.4.a:0 "Space Amoeba Hatchlings"
+ eolbioengfac.4.a.tooltip:0 "Breed Space Amoeba Hatchlings"
+ eolbioengfac.4.b:0 "Space Amoeba Mother"
+ eolbioengfac.4.b.tooltip:0 "Breed Space Amoeba Mothers"
+ eolbioengfac.4.c:0 "Space Amoeba Centenerian"
+ eolbioengfac.4.c.tooltip:0 "Breed Space Amoeba Centenerians"
+ eolbioengfac.4.d:0 "Go back"
+ eolbioengfac.4.d.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.12.a:0 "1x"
+ eolbioengfac.12.a.tooltip:0 "Breed 1 Amoeba Hatchling"
+ eolbioengfac.12.b:0 "5x"
+ eolbioengfac.12.b.tooltip:0 "Breed 5 Amoeba Hatchlings"
+ eolbioengfac.12.c:0 "10x"
+ eolbioengfac.12.c.tooltip:0 "Breed 10 Amoeba Hatchlings"
+ eolbioengfac.12.d:0 "50x"
+ eolbioengfac.12.d.tooltip:0 "Breed 50 Amoeba Hatchlings"
+ eolbioengfac.12.e:0 "100x"
+ eolbioengfac.12.e.tooltip:0 "Breed 100 Amoeba Hatchlings"
+ eolbioengfac.12.f:0 "Go back"
+ eolbioengfac.12.f.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.13.a:0 "1x"
+ eolbioengfac.13.a.tooltip:0 "Breed 1 Amoeba Mother"
+ eolbioengfac.13.b:0 "5x"
+ eolbioengfac.13.b.tooltip:0 "Breed 5 Amoeba Mothers"
+ eolbioengfac.13.c:0 "10x"
+ eolbioengfac.13.c.tooltip:0 "Breed 10 Amoeba Mothers"
+ eolbioengfac.13.d:0 "50x"
+ eolbioengfac.13.d.tooltip:0 "Breed 50 Amoeba Mothers"
+ eolbioengfac.13.e:0 "100x"
+ eolbioengfac.13.e.tooltip:0 "Breed 100 Amoeba Mothers"
+ eolbioengfac.13.f:0 "Go back"
+ eolbioengfac.13.f.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.14.a:0 "1x"
+ eolbioengfac.14.a.tooltip:0 "Breed 1 Amoeba Centenerian"
+ eolbioengfac.14.b:0 "5x"
+ eolbioengfac.14.b.tooltip:0 "Breed 5 Amoeba Centenerian"
+ eolbioengfac.14.c:0 "10x"
+ eolbioengfac.14.c.tooltip:0 "Breed 10 Amoeba Centenerian"
+ eolbioengfac.14.d:0 "50x"
+ eolbioengfac.14.d.tooltip:0 "Breed 50 Amoeba Centenerian"
+ eolbioengfac.14.e:0 "Go back"
+ eolbioengfac.14.e.tooltip:0 "Go back to previous window"
+ 
+ # Tiyanki
+ eolbioengfac.3.b:0 "Tiyanki Space Whales"
+ eolbioengfac.3.b.tooltip:0 "Breed Tiyanki Space Whales"
+ 
+ eolbioengfac.5.a:0 "Tiyanki Calfs"
+ eolbioengfac.5.a.tooltip:0 "Breed Tiyanki Calfs"
+ eolbioengfac.5.b:0 "Tiyanki Cows"
+ eolbioengfac.5.b.tooltip:0 "Breed Tiyanki Cows"
+ eolbioengfac.5.c:0 "Tiyanki Bulls"
+ eolbioengfac.5.c.tooltip:0 "Breed Tiyanki Bulls"
+ eolbioengfac.5.d:0 "Tiyanki Matriarch"
+ eolbioengfac.5.d.tooltip:0 "Breed Tiyanki Matriarch"
+ eolbioengfac.5.e:0 "Go back"
+ eolbioengfac.5.e.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.15.a:0 "1x"
+ eolbioengfac.15.a.tooltip:0 "Breed 1 Tiyanki Calf"
+ eolbioengfac.15.b:0 "5x"
+ eolbioengfac.15.b.tooltip:0 "Breed 5 Tiyanki Calfs"
+ eolbioengfac.15.c:0 "10x"
+ eolbioengfac.15.c.tooltip:0 "Breed 10 Tiyanki Calfs"
+ eolbioengfac.15.d:0 "50x"
+ eolbioengfac.15.d.tooltip:0 "Breed 50 Tiyanki Calfs"
+ eolbioengfac.15.e:0 "100x"
+ eolbioengfac.15.e.tooltip:0 "Breed 100 Tiyanki Calfs"
+ eolbioengfac.15.f:0 "Go back"
+ eolbioengfac.15.f.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.16.a:0 "1x"
+ eolbioengfac.16.a.tooltip:0 "Breed 1 Tiyanki Cow"
+ eolbioengfac.16.b:0 "5x"
+ eolbioengfac.16.b.tooltip:0 "Breed 5 Tiyanki Cows"
+ eolbioengfac.16.c:0 "10x"
+ eolbioengfac.16.c.tooltip:0 "Breed 10 Tiyanki Cows"
+ eolbioengfac.16.d:0 "50x"
+ eolbioengfac.16.d.tooltip:0 "Breed 50 Tiyanki Cows"
+ eolbioengfac.16.e:0 "100x"
+ eolbioengfac.16.e.tooltip:0 "Breed 100 Tiyanki Cows"
+ eolbioengfac.16.f:0 "Go back"
+ eolbioengfac.16.f.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.17.a:0 "1x"
+ eolbioengfac.17.a.tooltip:0 "Breed 1 Tiyanki Bull"
+ eolbioengfac.17.b:0 "5x"
+ eolbioengfac.17.b.tooltip:0 "Breed 5 Tiyanki Bulls"
+ eolbioengfac.17.c:0 "10x"
+ eolbioengfac.17.c.tooltip:0 "Breed 10 Tiyanki Bulls"
+ eolbioengfac.17.d:0 "50x"
+ eolbioengfac.17.d.tooltip:0 "Breed 50 Tiyanki Bulls"
+ eolbioengfac.17.e:0 "100x"
+ eolbioengfac.17.e.tooltip:0 "Breed 100 Tiyanki Bulls"
+ eolbioengfac.17.f:0 "Go back"
+ eolbioengfac.17.f.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.18.a:0 "Breed a Tiyanki Matriarch"
+ eolbioengfac.18.a.tooltip:0 "Breed a single Tiyanki Matriarch\n§YEmpire Limit: 3§!\n"
+ eolbioengfac.18.b:0 "Go back"
+ eolbioengfac.18.b.tooltip:0 "Go back to previous window"
+ 
+ # Crystals
+ eolbioengfac.3.c:0 "Crystalline Entities"
+ eolbioengfac.3.c.tooltip:0 "Breed Crystalline Entities"
+ 
+ eolbioengfac.6.a:0 "Crystal Shardlings"
+ eolbioengfac.6.a.tooltip:0 "Breed Crystal Shardlings"
+ eolbioengfac.6.b:0 "Crystal Shards"
+ eolbioengfac.6.b.tooltip:0 "Breed Crystal Shards"
+ eolbioengfac.6.c:0 "Crystal Quintessences"
+ eolbioengfac.6.c.tooltip:0 "Breed Crystal Quintessences"
+ eolbioengfac.6.d:0 "Crystal Core"
+ eolbioengfac.6.d.tooltip:0 "Breed Crystal Cores"
+ eolbioengfac.6.e:0 "Go back"
+ eolbioengfac.6.e.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.19.a:0 "1x"
+ eolbioengfac.19.a.tooltip:0 "Grow 1 Crystal Shardling"
+ eolbioengfac.19.b:0 "5x"
+ eolbioengfac.19.b.tooltip:0 "Grow 5 Crystal Shardlings"
+ eolbioengfac.19.c:0 "10x"
+ eolbioengfac.19.c.tooltip:0 "Grow 10 Crystal Shardlings"
+ eolbioengfac.19.d:0 "50x"
+ eolbioengfac.19.d.tooltip:0 "Grow 50 Crystal Shardlings"
+ eolbioengfac.19.e:0 "100x"
+ eolbioengfac.19.e.tooltip:0 "Grow 100 Crystal Shardlings"
+ eolbioengfac.19.f:0 "Go back"
+ eolbioengfac.19.f.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.20.a:0 "1x"
+ eolbioengfac.20.a.tooltip:0 "Grow 1 Crystal Shard"
+ eolbioengfac.20.b:0 "5x"
+ eolbioengfac.20.b.tooltip:0 "Grow 5 Crystal Shards"
+ eolbioengfac.20.c:0 "10x"
+ eolbioengfac.20.c.tooltip:0 "Grow 10 Crystal Shards"
+ eolbioengfac.20.d:0 "50x"
+ eolbioengfac.20.d.tooltip:0 "Grow 50 Crystal Shards"
+ eolbioengfac.20.e:0 "100x"
+ eolbioengfac.20.e.tooltip:0 "Grow 100 Crystal Shards"
+ eolbioengfac.20.f:0 "Go back"
+ eolbioengfac.20.f.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.21.a:0 "1x"
+ eolbioengfac.21.a.tooltip:0 "Grow 1 Crystal Quintessence"
+ eolbioengfac.21.b:0 "5x"
+ eolbioengfac.21.b.tooltip:0 "Grow 5 Crystal Quintessences"
+ eolbioengfac.21.c:0 "10x"
+ eolbioengfac.21.c.tooltip:0 "Grow 10 Crystal Quintessences"
+ eolbioengfac.21.d:0 "50x"
+ eolbioengfac.21.d.tooltip:0 "Grow 50 Crystal Quintessences"
+ eolbioengfac.21.e:0 "100x"
+ eolbioengfac.21.e.tooltip:0 "Grow 100 Crystal Quintessences"
+ eolbioengfac.21.f:0 "Go back"
+ eolbioengfac.21.f.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.22.a:0 "Grow a Crystal Core"
+ eolbioengfac.22.a.tooltip:0 "Grow a single Crystal Core\n§YEmpire Limit: 10§!\n\nCrystal Cores are defensive units and can't use hyperlanes. Make sure to have a gateway in the system you grow them.\n"
+ eolbioengfac.22.b:0 "Go back"
+ eolbioengfac.22.b.tooltip:0 "Go back to previous window"
+ 
+ # Void Clouds
+ eolbioengfac.3.d:0 "Void Clouds"
+ eolbioengfac.3.d.tooltip:0 "Breed Void Clouds"
+ 
+ eolbioengfac.7.a:0 "Lesser Void Clouds"
+ eolbioengfac.7.a.tooltip:0 "Breed Lesser Void Clouds"
+ eolbioengfac.7.b:0 "Void Clouds"
+ eolbioengfac.7.b.tooltip:0 "Breed Void Clouds"
+ eolbioengfac.7.c:0 "Shroud Avatars"
+ eolbioengfac.7.c.tooltip:0 "Breed Shroud Avatars"
+ eolbioengfac.7.d:0 "Go back"
+ eolbioengfac.7.d.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.23.a:0 "1x"
+ eolbioengfac.23.a.tooltip:0 "Conjure 1 Lesser Void Cloud"
+ eolbioengfac.23.b:0 "5x"
+ eolbioengfac.23.b.tooltip:0 "Conjure 5 Lesser Void Clouds"
+ eolbioengfac.23.c:0 "10x"
+ eolbioengfac.23.c.tooltip:0 "Conjure 10 Lesser Void Clouds"
+ eolbioengfac.23.d:0 "50x"
+ eolbioengfac.23.d.tooltip:0 "Conjure 50 Lesser Void Clouds"
+ eolbioengfac.23.e:0 "100x"
+ eolbioengfac.23.e.tooltip:0 "Conjure 100 Lesser Void Clouds"
+ eolbioengfac.23.f:0 "Go back"
+ eolbioengfac.23.f.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.24.a:0 "1x"
+ eolbioengfac.24.a.tooltip:0 "Conjure 1 Void Cloud"
+ eolbioengfac.24.b:0 "5x"
+ eolbioengfac.24.b.tooltip:0 "Conjure 5 Void Clouds"
+ eolbioengfac.24.c:0 "10x"
+ eolbioengfac.24.c.tooltip:0 "Conjure 10 Void Clouds"
+ eolbioengfac.24.d:0 "50x"
+ eolbioengfac.24.d.tooltip:0 "Conjure 50 Void Clouds"
+ eolbioengfac.24.e:0 "100x"
+ eolbioengfac.24.e.tooltip:0 "Conjure 100 Void Clouds"
+ eolbioengfac.24.f:0 "Go back"
+ eolbioengfac.24.f.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.25.a:0 "Conjure a Shroud Avatar"
+ eolbioengfac.25.a.tooltip:0 "Conjure a single Shroud Avatar\n§YEmpire Limit: 5§!\n"
+ eolbioengfac.25.b:0 "Go back"
+ eolbioengfac.25.b.tooltip:0 "Go back to previous window"
+ 
+ # Voidspawn
+ eolbioengfac.3.e:0 "Voidspawns"
+ eolbioengfac.3.e.tooltip:0 "Breed Voidspawns"
+ 
+ eolbioengfac.8.a:0 "Voidspawns"
+ eolbioengfac.8.a.tooltip:0 "Breed Voidspawns"
+ eolbioengfac.8.b:0 "Go back"
+ eolbioengfac.8.b.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.26.a:0 "Breed a Voidspawn"
+ eolbioengfac.26.a.tooltip:0 "Breed a single Voidspawn\n§YEmpire Limit: 3§!\n"
+ eolbioengfac.26.b:0 "Go back"
+ eolbioengfac.26.b.tooltip:0 "Go back to previous window"
+ 
+ # Ether Drakes
+ eolbioengfac.3.f:0 "Ether Drakes"
+ eolbioengfac.3.f.tooltip:0 "Breed Ether Drakes"
+ 
+ eolbioengfac.9.a:0 "Ether Drake Hatchlings"
+ eolbioengfac.9.a.tooltip:0 "Breed Ether Drake Hatchlings"
+ eolbioengfac.9.b:0 "Ether Drakes"
+ eolbioengfac.9.b.tooltip:0 "Breed Ether Drakes"
+ eolbioengfac.9.c:0 "Go back"
+ eolbioengfac.9.c.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.27.a:0 "Breed a Ether Drake Hatchling"
+ eolbioengfac.27.a.tooltip:0 "Breed a single Ether Drake Hatchling\n§YEmpire Limit: 8§!\n"
+ eolbioengfac.27.b:0 "Go back"
+ eolbioengfac.27.b.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.28.a:0 "Breed a Ether Drake"
+ eolbioengfac.28.a.tooltip:0 "Breed a single Ether Drake\n§YEmpire Limit: 3§!\n"
+ eolbioengfac.28.b:0 "Go back"
+ eolbioengfac.28.b.tooltip:0 "Go back to previous window"
+ 
+ # Dimensional Horror
+ eolbioengfac.3.g:0 "Dimensional Horror"
+ eolbioengfac.3.g.tooltip:0 "Conjure a Dimensional Horror"
+ 
+ eolbioengfac.10.a:0 "Dimensional Horror"
+ eolbioengfac.10.a.tooltip:0 "Conjure a Dimensional Horror"
+ eolbioengfac.10.b:0 "Go back"
+ eolbioengfac.10.b.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.29.a:0 "Conjure a Dimensional Horror"
+ eolbioengfac.29.a.tooltip:0 "Conjure a single Dimensional Horror\n§YEmpire Limit: 3§!\n\nDimensional Horrors are defensive units and can't use hyperlanes. Make sure to have a gateway in the system you grow them.\n"
+ eolbioengfac.29.b:0 "Go back"
+ eolbioengfac.29.b.tooltip:0 "Go back to previous window"
+ 
+ # Stellar Devourer
+ eolbioengfac.3.h:0 "Stellar Devourer"
+ eolbioengfac.3.h.tooltip:0 "Breed a Stellar Devourer"
+ 
+ eolbioengfac.11.a:0 "Stellar Devourer"
+ eolbioengfac.11.a.tooltip:0 "Breed a Stellar Devourer"
+ eolbioengfac.11.b:0 "Go back"
+ eolbioengfac.11.b.tooltip:0 "Go back to previous window"
+ 
+ eolbioengfac.30.a:0 "Breed a Stellar Devourer"
+ eolbioengfac.30.a.tooltip:0 "Breed a single Stellar Devourer\n§YEmpire Limit: 2§!\n"
+ 
+ eolbioengfac.30.b:0 "Go back"
+ eolbioengfac.30.b.tooltip:0 "Go back to previous window"
+ 
+ # Cooldown Timer Flags
+ leviathan_timer:0 "Leviathan Cooldown"
+ leviathan_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding a new Leviathan"
+ 
+ amoeba_timer:0 "Amoeba Hatchling Cooldown"
+ amoeba_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding new Amoeba Hatchlings"
+ amoeba_mother_timer:0 "Amoeba Mother Cooldown"
+ amoeba_mother_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding new Amoeba Mothers"
+ amoeba_centenarian_timer:0 "Amoeba Centenarian Cooldown"
+ amoeba_centenarian_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding new Amoeba Centenarians"
+ 
+ calf_timer:0 "Tiyanki Calf Cooldown"
+ calf_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding new Tiyanki Calfs"
+ cow_timer:0 "Tiyanki Cow Cooldown"
+ cow_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding new Tiyanki Cows"
+ bull_timer:0 "Tiyanki Bull Cooldown"
+ bull_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding new Tiyanki Bulls"
+ 
+ shardling_timer:0 "Shardling Cooldown"
+ shardling_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding new Crystal Shardlings"
+ shard_timer:0 "Shard Cooldown"
+ shard_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding new Crystal Shards"
+ quintessence_timer:0 "Quintessence Cooldown"
+ quintessence_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding new Crystal Quintessences"
+ crystal_core_timer:0 "Crystal Core Cooldown"
+ crystal_core_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding a new Crystal Core"
+ 
+ lesser_void_cloud_timer:0 "Lesser Void Cloud Cooldown"
+ lesser_void_cloud_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding new Lesser Void Clouds"
+ void_cloud_timer:0 "Void Cloud Cooldown"
+ void_cloud_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding new Void Clouds"
+ shroud_avatar_timer:0 "Shroud Avatar Cooldown"
+ shroud_avatar_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding a new Shroud Avatar"
+ 
+ baby_dragon_timer:0 "Ether Drake Hatchling Cooldown"
+ baby_dragon_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding a new Ether Drake Hatchling"
+ 
+ devourer_timer:0 "Stellar Devourer Cooldown"
+ devourer_timer_desc:0 "The Bio Engineering Facility needs some time before it can start breeding a new Stellar Devourer"

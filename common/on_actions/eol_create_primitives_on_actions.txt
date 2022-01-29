@@ -1,0 +1,8 @@
+
+# A planet has begun the colonization process.
+# Scope = Planet
+on_colonization_started = {
+	events = {
+		eol.1
+	}
+}

@@ -1,0 +1,48 @@
+origin_creators = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_creators.dds"
+	picture = GFX_origin_creators
+
+	starting_colony = pc_relic 
+	preferred_planet_class_neighbor = no
+	max_once_global = yes
+
+	playable = {
+		always = yes
+	}
+
+	possible = {
+		ethics = {
+			NOT = { 
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+				value = ethic_fanatic_authoritarian
+			}
+		}
+		civics = { 
+			NOT = { 
+				value = civic_fanatic_purifiers
+				value = civic_hive_devouring_swarm
+			} 
+		}
+		owner = {
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+	}
+
+	description = "origin_tooltip_creators_effects"
+
+	modifier = { ship_colonizer_cost_mult = -0.5 }
+
+	flags = { custom_start_screen creator_flag}
+
+	traits = {
+		# Ancient? +influence & unity?
+	}
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 0
+	}
+}

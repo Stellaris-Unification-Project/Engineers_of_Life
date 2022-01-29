@@ -1,0 +1,175 @@
+# Bio Engineering Facility
+bio_engineering_facility_0 = {
+	entity = "construction_platform_entity"
+	construction_entity = "construction_platform_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	build_time = 1000
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 1000
+			influence = 100
+		}
+
+		upkeep = {
+			energy = 5
+			food = 5
+		}
+	}
+	
+	prerequisites = { "tech_bio_engineering_program" }
+	
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		custom_tooltip = {
+			fail_text = "requires_surveyed_system"
+			NOT = {
+				any_system_planet = {
+					is_surveyed = {
+						who = prev.from
+						status = no
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_black_hole_neutron_star_pulsar"
+			NOT = {
+				is_star_class = sc_black_hole
+				is_star_class = sc_neutron_star
+				is_star_class = sc_pulsar
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_binary_trinary"
+			NOR = {
+				is_star_class = sc_binary_1
+				is_star_class = sc_binary_2
+				is_star_class = sc_binary_3
+				is_star_class = sc_binary_4
+				is_star_class = sc_binary_5
+				is_star_class = sc_binary_6
+				is_star_class = sc_binary_7
+				is_star_class = sc_binary_8
+				is_star_class = sc_binary_9
+				is_star_class = sc_binary_10
+				is_star_class = sc_trinary_1
+				is_star_class = sc_trinary_2
+				is_star_class = sc_trinary_3
+				is_star_class = sc_trinary_4
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_no_existing_megastructure"
+			#NOT = { has_any_megastructure = yes }
+			has_no_non_gate_megastructure = yes
+		}
+	}
+	
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "must_build_around_star"
+				is_star = yes
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+		}
+	}
+	
+	# root = system
+	# from = country	
+	ai_weight = {
+		factor = 0
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	on_build_complete = {
+		from = {
+			if = {
+				limit = { NOT = { has_country_flag = bio_facility_site_completed } }
+				set_country_flag = bio_facility_site_completed
+
+				country_event = { id = eolbioengfac.1 }
+			}
+		}
+	}
+}
+
+# Bio Engineering Facility 1
+bio_engineering_facility_1 = {
+	entity = "drone_homebase_hull_entity"
+	construction_entity = "drone_homebase_hull_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	build_time = 1200
+	resources = {
+		category = megastructures
+		cost = {
+			alloys = 2500
+			food = 1500
+		}
+
+		upkeep = {
+			energy = 15
+			food = 25
+		}
+	}
+	upgrade_from = {
+		bio_engineering_facility_0
+	}
+
+	prerequisites = { "tech_bio_engineering_program" }
+	show_prereqs = yes
+
+	produces = {
+		society_research = 150
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 30
+	}
+
+	on_build_complete = {
+		from = { 
+			if = {
+				limit = { NOT = { has_country_flag = bio_facility_completed } }
+				set_country_flag = bio_facility_completed
+				save_global_event_target_as = biofac
+
+				country_event = { id = eolbioengfac.2 }
+			}
+		}
+	}
+}
+
+#### open menu
+
+bio_engineering_ready = {
+	entity = "drone_homebase_hull_entity"
+	construction_entity = "drone_homebase_hull_entity"
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = no
+	entity_offset = { x = -27 y = -27 }
+	prerequisites = { "tech_bio_engineering_program" }
+	upgrade_from = { bio_engineering_facility_1 }
+
+	on_build_complete = {
+		from = {
+			country_event = { id = eolbioengfac.3 }
+			#save_global_event_target_as = biofac
+		}
+        fromfrom.planet = { set_planet_flag = bioeng_planet_build }
+        fromfrom.solar_system = { set_star_flag = bioengstar }
+	}
+}

@@ -1,0 +1,23 @@
+
+
+# ####################
+#  Critter Weapons - Crystal Entity Weapons
+# ####################
+
+@critter_cost_value = 35
+
+weapon_component_template = {
+	key = "IMP_SPORE_LAUNCHER"
+	size = torpedo
+	entity = "invisible_turret_entity"
+	type = missile
+	prio_projectile = yes
+
+	hidden = yes
+
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+
+	tags = { weapon_type_explosive }
+	projectile_gfx = "voidspawn_missile"
+}

@@ -1,0 +1,424 @@
+#########################
+#
+# EoL Events
+#
+#########################
+
+namespace = advprim
+
+### advance primitive civilizations to their next stage
+
+## Stone Age ##
+
+country_event = {
+	id = advprim.1
+	title = "advprim.1.name" 
+	desc = "advprim.1.desc" 
+	picture = GFX_evt_alien_cavemen
+	show_sound = event_laboratory_sound
+	location = FROMFROM
+	
+	is_triggered_only = yes
+	
+	immediate = {
+        FROMFROM = {
+            owner = { save_event_target_as = primitive_country }
+            event_target:primitive_country = {
+				switch = {
+					trigger = has_country_flag
+					stone_age = {
+						remove_country_flag = stone_age
+						root = { set_country_flag = bronze_age }
+					}					
+                }
+                set_primitive_age_effect = { primitive_age = bronze_age }
+                change_country_flag = {
+                    icon = {
+                        category = "special"
+                        file = "primitive.dds"
+                    }
+                    background = {
+				        category = "backgrounds"
+				        file = "new_dawn.dds"
+			         }
+			         colors = {
+				        "green"
+				        "dark_green"
+				        "null"
+				        "null"
+			         }
+                }
+            }
+            observation_outpost = { add_mission_progress = -1.0 }
+        }
+    }
+}
+
+## Bronze Age ##
+
+country_event = {
+	id = advprim.2
+	title = "advprim.2.name" 
+	desc = "advprim.2.desc" 
+	picture = GFX_evt_alien_cavemen
+	show_sound = event_laboratory_sound
+	location = FROMFROM
+	
+	is_triggered_only = yes
+	
+	immediate = {
+        FROMFROM = {
+            owner = { save_event_target_as = primitive_country }
+            event_target:primitive_country = {
+				switch = {
+					trigger = has_country_flag				
+					bronze_age = {
+						remove_country_flag = bronze_age
+						root = { set_country_flag = iron_age }
+					}
+                }
+                set_primitive_age_effect = { primitive_age = iron_age }
+                change_country_flag = {
+                    icon = {
+                        category = "special"
+                        file = "primitive.dds"
+                    }
+                    background = {
+                        category = "backgrounds"
+                        file = "new_dawn.dds"
+                    }
+                    colors = {
+                        "purple"
+                        "dark_purple"
+                        "null"
+                        "null"
+                    }
+                }
+            }
+            observation_outpost = { add_mission_progress = -1.0 }
+        }
+    }
+}
+
+## Iron Age ##
+
+country_event = {
+	id = advprim.3
+	title = "advprim.3.name" 
+	desc = "advprim.3.desc" 
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_laboratory_sound
+	location = FROMFROM
+	
+	is_triggered_only = yes
+	
+	immediate = {
+        FROMFROM = {
+            owner = { save_event_target_as = primitive_country }
+            event_target:primitive_country = {
+				switch = {
+					trigger = has_country_flag				
+					bronze_age = {
+						remove_country_flag = iron_age
+						root = { set_country_flag = late_medieval_age }
+					}
+                }
+                set_primitive_age_effect = { primitive_age = late_medieval_age }
+                change_country_flag = {
+                    icon = {
+                        category = "special"
+                        file = "primitive.dds"
+                    }
+                    background = {
+                        category = "backgrounds"
+                        file = "new_dawn.dds"
+                    }
+                    colors = {
+                        "light_blue"
+                        "blue"
+                        "null"
+                        "null"
+                    }
+                }
+            }
+            observation_outpost = { add_mission_progress = -1.0 }
+        }
+    }
+}
+
+## Late Medieval Age ##
+
+country_event = {
+	id = advprim.4
+	title = "advprim.4.name" 
+	desc = "advprim.4.desc" 
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_laboratory_sound
+	location = FROMFROM
+	
+	is_triggered_only = yes
+	
+	immediate = {
+        FROMFROM = {
+            owner = { save_event_target_as = primitive_country }
+            event_target:primitive_country = {
+				switch = {
+					trigger = has_country_flag				
+					bronze_age = {
+						remove_country_flag = late_medieval_age
+						root = { set_country_flag = renaissance_age }
+					}
+                }
+                set_primitive_age_effect = { primitive_age = renaissance_age }
+                change_country_flag = {
+                    icon = {
+                        category = "special"
+                        file = "primitive.dds"
+                    }
+                    background = {
+                        category = "backgrounds"
+                        file = "new_dawn.dds"
+                    }
+                    colors = {
+                        "pink"
+                        "burgundy"
+                        "null"
+                        "null"
+                    }
+                }
+            }
+            observation_outpost = { add_mission_progress = -1.0 }
+        }
+    }
+}
+
+## Renaissance Age ##
+
+country_event = {
+	id = advprim.5
+	title = "advprim.5.name" 
+	desc = "advprim.5.desc" 
+	picture = GFX_evt_steam_age
+	show_sound = event_laboratory_sound
+	location = FROMFROM
+	
+	is_triggered_only = yes
+	
+	immediate = {
+        FROMFROM = {
+            owner = { save_event_target_as = primitive_country }
+            event_target:primitive_country = {
+				switch = {
+					trigger = has_country_flag				
+					bronze_age = {
+						remove_country_flag = renaissance_age
+						root = { set_country_flag = steam_age }
+					}
+                }
+                set_primitive_age_effect = { primitive_age = steam_age }
+                change_country_flag = {
+                    icon = {
+                        category = "special"
+                        file = "primitive.dds"
+                    }
+                    background = {
+                        category = "backgrounds"
+                        file = "new_dawn.dds"
+                    }
+                    colors = {
+                        "orange"
+                        "red"
+                        "null"
+                        "null"
+                    }
+                }
+            }
+            observation_outpost = { add_mission_progress = -1.0 }
+        }
+	}
+}
+
+## Steam Age ##
+
+country_event = {
+	id = advprim.6
+	title = "advprim.6.name" 
+	desc = "advprim.6.desc" 
+	picture = GFX_evt_industrial_age
+	show_sound = event_laboratory_sound
+#	location = FROMFROM
+	
+	is_triggered_only = yes
+	
+	immediate = {
+        FROMFROM = {
+            owner = { save_event_target_as = primitive_country }
+            event_target:primitive_country = {
+				switch = {
+					trigger = has_country_flag				
+					bronze_age = {
+						remove_country_flag = steam_age
+						root = { set_country_flag = industrial_age }
+					}
+                }
+                set_primitive_age_effect = { primitive_age = industrial_age }
+                set_graphical_culture = industrial_01
+                change_country_flag = {
+                    icon = {
+                        category = "special"
+                        file = "primitive.dds"
+                    }
+                    background = {
+                        category = "backgrounds"
+                        file = "new_dawn.dds"
+                    }
+                    colors = {
+                        "beige"
+                        "yellow"
+                        "null"
+                        "null"
+                    }
+                }
+            }
+            observation_outpost = { add_mission_progress = -1.0 }
+        }
+	}
+}
+
+## Industrial Age ##
+
+country_event = {
+	id = advprim.7
+	title = "advprim.7.name" 
+	desc = "advprim.7.desc" 
+	picture = GFX_evt_machine_age
+	show_sound = event_laboratory_sound
+	location = FROMFROM
+	
+	is_triggered_only = yes
+	
+	immediate = {
+        FROMFROM = {
+            owner = { save_event_target_as = primitive_country }
+            event_target:primitive_country = {
+				switch = {
+					trigger = has_country_flag				
+					bronze_age = {
+						remove_country_flag = industrial_age
+						root = { set_country_flag = machine_age }
+					}
+                }
+                set_primitive_age_effect = { primitive_age = machine_age }
+                change_country_flag = {
+                    icon = {
+                        category = "special"
+                        file = "primitive.dds"
+                    }
+                    background = {
+                        category = "backgrounds"
+                        file = "new_dawn.dds"
+                    }
+                    colors = {
+                        "yellow"
+                        "orange"
+                        "null"
+                        "null"
+                    }
+                }
+            }
+            observation_outpost = { add_mission_progress = -1.0 }
+        }
+	}
+}
+
+## Machine Age ##
+
+country_event = {
+	id = advprim.8
+	title = "advprim.8.name" 
+	desc = "advprim.8.desc" 
+	picture = GFX_evt_metropolis
+	show_sound = event_laboratory_sound
+	location = FROMFROM
+	
+	is_triggered_only = yes
+	
+	immediate = {
+        FROMFROM = {
+            owner = { save_event_target_as = primitive_country }
+            event_target:primitive_country = {
+				switch = {
+					trigger = has_country_flag				
+					bronze_age = {
+						remove_country_flag = machine_age
+						root = { set_country_flag = atomic_age }
+					}
+                }
+                set_primitive_age_effect = { primitive_age = atomic_age }
+                change_country_flag = {
+                    icon = {
+                        category = "special"
+                        file = "primitive.dds"
+                    }
+                    background = {
+                        category = "backgrounds"
+                        file = "new_dawn.dds"
+                    }
+                    colors = {
+                        "beige"
+                        "brown"
+                        "null"
+                        "null"
+                    }
+                }
+            }
+            observation_outpost = { add_mission_progress = -1.0 }
+        }
+	}
+}
+
+## Atomic Age ##
+
+country_event = {
+	id = advprim.9
+	title = "advprim.9.name" 
+	desc = "advprim.9.desc" 
+	picture = GFX_evt_metropolis
+	show_sound = event_laboratory_sound
+	location = FROMFROM
+	
+	is_triggered_only = yes
+	
+	immediate = {
+        FROMFROM = {
+            owner = { save_event_target_as = primitive_country }
+            event_target:primitive_country = {
+				switch = {
+					trigger = has_country_flag				
+					bronze_age = {
+						remove_country_flag = atomic_age
+						root = { set_country_flag = early_space_age }
+					}
+                }
+                set_primitive_age_effect = { primitive_age = early_space_age }
+                change_country_flag = {
+                    icon = {
+                        category = "special"
+                        file = "primitive.dds"
+                    }
+                    background= {
+                        category = "backgrounds"
+                        file = "new_dawn.dds"
+                    }
+                    colors={
+                        "grey"
+                        "dark_grey"
+                        "null"
+                        "null"
+                    }
+                }
+            }
+            observation_outpost = { add_mission_progress = -1.0 }
+        }
+	}
+}

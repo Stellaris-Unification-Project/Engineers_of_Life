@@ -1,0 +1,81 @@
+# Icons set here are the ones show in the actual slot. The reason is so that we can support different icons for different sizes. 
+
+ship_modifier = {
+		ship_windup_mult = -0.5
+	}
+
+utility_component_template = {
+	key = "BIO_DRIVE_2"
+	hidden = no
+	size = small
+	icon = "GFX_ship_part_warp_drive_1"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			food = @cost1
+		}
+	}
+	ftl = yes
+
+	ai_weight = {
+		weight = 1
+	}
+	
+	#prerequisites = { "tech_bio_drive" }
+	component_set = "bio_ftl_components"
+}
+
+utility_component_template = {
+	key = "BIO_GATE_DRIVE"
+	hidden = no
+	size = small
+	icon = "GFX_ship_part_warp_drive_1"
+	icon_frame = 1
+	power = 0
+	resources = {
+		category = ship_components
+		cost = {
+			minerals = @cost1
+			rare_crystals = @cost1
+		}
+	}
+	ftl = yes
+	ship_modifier = {
+		ship_windup_mult = 500
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+	
+	#prerequisites = { "tech_bio_drive" }
+	component_set = "bio_ftl_components"
+}
+
+utility_component_template = {
+	key = "BIO_PROPULSION_2"
+	hidden = no
+	size = small
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1
+	power = 0
+	
+	#prerequisites = { "tech_bio_propulsion" }
+	component_set = "bio_propulsion_components"
+}
+
+utility_component_template = {
+	key = "BIO_SENSORS_2"
+	hidden = no
+	size = small
+	icon = "GFX_ship_part_sensor_2"
+	icon_frame = 1
+	power = 0
+	sensor_range = 2
+	hyperlane_range = 4
+	
+	#prerequisites = { "tech_bio_sensors" }
+	component_set = "bio_sensors_components"
+}

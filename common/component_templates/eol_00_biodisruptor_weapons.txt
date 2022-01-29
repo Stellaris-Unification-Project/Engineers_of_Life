@@ -1,0 +1,95 @@
+weapon_component_template = {
+	key = "SMALL_BIO_DISRUPTOR"
+
+	hidden = yes
+	
+	size = small
+	type = instant
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+	projectile_gfx = "small_bd_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+	
+	component_set = "BIO_DISRUPTOR"
+	resources = {
+		category = ship_components
+		cost = {
+			food = 30
+		}
+		upkeep = {
+			food = @s_t1_upkeep_energy
+		}
+	}
+}
+
+weapon_component_template = {
+	key = "LARGE_BIO_DISRUPTOR"
+
+	hidden = yes
+	
+	size = large
+	type = instant
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+	projectile_gfx = "large_bd_weapon"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_anti_shield }
+	
+	component_set = "BIO_DISRUPTOR"
+	resources = {
+		category = ship_components
+		cost = {
+			food = 120
+		}
+		upkeep = {
+			food = @s_t1_upkeep_energy
+		}
+	}
+}
+
+strike_craft_component_template = {
+	key = "IMPROVED_AMOEBA_STRIKE_CRAFT"
+	
+	size = large
+	entity = "space_amoeba_small_entity"
+	resources = {
+		category = ship_components
+		cost = {
+			food = 60
+		}
+	}
+
+	count = 8
+	regeneration_per_day = 0.13
+	launch_time = 1.5
+	
+	damage = { min = 20 max = 30 }
+	cooldown = 5
+	range = 10
+	accuracy = 0.70
+	tracking = 0.50
+	
+	health = 50
+	armor = 0
+	shield = 0
+	evasion = 0.50
+	
+	speed = 350
+	rotation_speed = 0.3
+	acceleration = 0.5
+	
+	shield_damage = 1.0
+	shield_penetration = 1
+	armor_damage = 1.5
+	
+	ship_behavior = "bombers_behavior"
+	
+	weapon_type = instant
+	projectile_gfx = "small_space_amoeba_weapon"
+	
+	icon = "GFX_ship_part_amoeba_strike_craft_1"
+	icon_frame = 1
+	tags = { weapon_type_strike_craft }
+	ai_tags = { weapon_role_anti_shield }
+}

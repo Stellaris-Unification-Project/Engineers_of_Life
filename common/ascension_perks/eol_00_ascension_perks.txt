@@ -1,0 +1,51 @@
+# See traditions/README.txt for format
+
+#################
+# NEMESIS ASCENSION PERKS
+#################
+
+ap_leviathan_engineering = {
+	potential = {
+		NOT = { has_ascension_perk = ap_leviathan_engineering }
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+	}
+
+	on_enabled = {
+		custom_tooltip = "allow_leviathan_engineering"
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}
+
+ap_ultimate_leviathan_engineering = {
+	potential = {
+		NOT = { has_ascension_perk = ap_ultimate_leviathan_engineering }
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_3"
+			num_ascension_perks > 2
+		}
+		custom_tooltip = {
+			fail_text = "requires_ap_leviathan_engineering"
+			has_ascension_perk = ap_leviathan_engineering
+		}
+	}
+
+	on_enabled = {
+		custom_tooltip = "allow_ultimate_leviathan_engineering"
+	}
+
+	ai_weight = {
+		factor = 0
+	}
+}

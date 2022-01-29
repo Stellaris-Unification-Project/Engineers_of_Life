@@ -1,0 +1,33 @@
+weapon_component_template = {
+	key = "IMP_ELDER_SPACE_WHALE_WEAPON"
+	size = titanic
+	type = instant
+	prio_projectile = yes
+
+	hidden = yes
+
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+
+	firing_arc = 15.0
+	min_range = 30.0
+
+	tags = { weapon_type_energy }
+	projectile_gfx = "elder_tiyanki_weapon"
+}
+
+weapon_component_template = {
+	key = "IMP_ELDER_SPACE_WHALE_SPIKE"
+	size = large
+	entity = "invisible_turret_entity"
+	type = instant
+	prio_projectile = yes
+
+	hidden = yes
+
+	icon = "GFX_ship_part_space_whale_weapon_1"
+	icon_frame = 1
+
+	tags = { weapon_type_energy }
+	projectile_gfx = "elder_tiyanki_secondary_weapon"
+}

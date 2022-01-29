@@ -1,0 +1,31 @@
+component_set = {
+	key = "bio_ftl_components"
+	
+	required_component_set = yes
+	icon = "GFX_ship_part_warp_drive_1"
+	icon_frame = 1
+}
+
+component_set = {
+	key = "bio_propulsion_components"
+	
+	required_component_set = yes
+	icon = "GFX_ship_part_thruster_1"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "bio_sensors_components"
+	
+	required_component_set = yes
+	icon = "GFX_ship_part_sensor"
+	icon_frame = 1	
+}
+
+component_set = {
+	key = "bio_ship_aura_components"
+	
+	required_component_set = yes
+	icon = "GFX_ship_part_extradimensional_weapon_1"
+	icon_frame = 1	
+}

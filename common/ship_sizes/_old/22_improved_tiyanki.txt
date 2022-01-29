@@ -1,0 +1,250 @@
+#reloadable with 'reload stats'
+# This file is where you start when you want to configure something new, then go to sections
+
+@corvette_collision_radius = 2.0
+@destroyer_collision_radius = 2.5
+@cruiser_collision_radius = 3
+@battleship_collision_radius = 3
+@titan_collision_radius = 15
+
+@build_block_radius_none = 0
+@build_block_radius_civilian = 20
+@build_block_radius_military = 200
+
+@speed_very_slow = 80
+@speed_slow = 100
+@speed_default = 120
+@speed_fast = 140
+@speed_very_fast = 160
+
+###########
+# Tiyanki #
+###########
+
+# Space Whale Calf
+eng_imp_space_whale_calf = {
+	graphical_culture = no
+	entity = space_whale_albino_section_entity
+	is_space_object = yes
+	max_speed = 235
+	rotation_speed = 0.08
+	acceleration = 0.6
+	formation_priority = @corvette_formation_priority
+	collision_radius = @corvette_collision_radius
+	modifier = {
+		ship_evasion_add = 32
+		ship_piracy_suppression_add = 8
+		ship_armor_add = 1000
+		ship_hull_regen_add_static = 3
+		ship_armor_regen_add_static = 4
+	}
+	max_hitpoints = 1200
+	fleet_slot_size = 1
+	size_multiplier = 1
+	section_slots = { "mid" = { locator = "root" } }
+	num_target_locators = 0
+	icon_frame = 12
+	text_icon = military_size_space_creature
+	
+	base_buildtime = 75
+
+	class = shipclass_military
+	is_designable = no
+	components_add_to_cost = no
+	enable_default_design = yes
+	auto_upgrade = no
+    
+	# default_behaviour = picket
+    
+	#prerequisites = { "tech_bio_engineering_program" }
+
+	min_upgrade_cost = {
+		food = 50
+	}
+
+	required_component_set = bio_ftl_components
+	required_component_set = bio_propulsion_components
+	required_component_set = bio_sensors_components
+
+	resources = {
+		category = ships
+		cost {
+			food = 200
+		}
+		upkeep = {
+			food = 0.25
+		}
+	}
+}
+
+# Space Whale Cow
+eng_imp_space_whale_cow = {
+	graphical_culture = no
+	entity = eng_space_whale_section_entity
+	is_space_object = yes
+	max_speed = 210
+	rotation_speed = 0.04
+	acceleration = 0.6
+	formation_priority = @destroyer_formation_priority
+	collision_radius = @destroyer_collision_radius
+	modifier = {
+		ship_evasion_add = @cruiser_evasion
+		ship_piracy_suppression_add = 9
+		ship_armor_add = 2100
+		ship_hull_regen_add_static = 6
+		ship_armor_regen_add_static = 8
+	}
+	max_hitpoints = 4200
+	fleet_slot_size = 2
+	size_multiplier = 2
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	icon_frame = 12
+	text_icon = military_size_space_creature
+	
+	base_buildtime = 150
+
+	class = shipclass_military
+	is_designable = no
+	components_add_to_cost = no
+	enable_default_design = yes
+	auto_upgrade = no
+    
+	# default_behaviour = picket
+    
+	#prerequisites = { "tech_bio_engineering_program" "tech_space_whale_weapon_1" }
+
+	min_upgrade_cost = {
+		food = 50
+	}
+
+	required_component_set = bio_ftl_components
+	required_component_set = bio_propulsion_components
+	required_component_set = bio_sensors_components
+	required_component_set = bio_ship_aura_components
+
+	resources = {
+		category = ships
+		cost {
+			food = 350
+		}
+		upkeep = {
+			food = 0.4
+		}
+	}
+}
+
+# Space Whale Bull
+eng_imp_space_whale_bull = {
+	graphical_culture = no
+	entity = eng_space_whale_red_section_entity
+	is_space_object = yes
+	max_speed = 210
+	rotation_speed = 0.04
+	acceleration = 0.6
+	formation_priority = @destroyer_formation_priority
+	collision_radius = @destroyer_collision_radius
+	modifier = {
+		ship_evasion_add = @cruiser_evasion
+		ship_piracy_suppression_add = 9
+		ship_armor_add = 2100
+		ship_hull_regen_add_static = 6
+		ship_armor_regen_add_static = 8
+	}
+	max_hitpoints = 4200
+	fleet_slot_size = 2
+	size_multiplier = 2
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+
+	icon_frame = 12
+	text_icon = military_size_space_creature
+	
+	base_buildtime = 150
+
+	class = shipclass_military
+	is_designable = no
+	components_add_to_cost = no
+	enable_default_design = yes
+	auto_upgrade = no
+    
+	# default_behaviour = picket
+    
+	#prerequisites = { "tech_bio_engineering_program" "tech_space_whale_weapon_1" }
+
+	min_upgrade_cost = {
+		food = 50
+	}
+
+	required_component_set = bio_ftl_components
+	required_component_set = bio_propulsion_components
+	required_component_set = bio_sensors_components
+	required_component_set = bio_ship_aura_components
+
+	resources = {
+		category = ships
+		cost {
+			food = 350
+		}
+		upkeep = {
+			food = 0.4
+		}
+	}
+}
+
+# Tiyanki Matriarch
+eng_imp_leviathan_01_elder_tiyanki = {
+	graphical_culture = no
+	entity = leviathan_01_elder_tiyanki_section_entity
+	is_space_object = yes
+	max_speed = 185
+	rotation_speed = 0.2
+	acceleration = 0.6
+	modifier = {
+		ship_evasion_add = 15
+		ship_piracy_suppression_add = 30
+		ship_armor_add = 3000
+		ship_hull_regen_add_static = 12
+		ship_armor_regen_add_static = 16
+	}
+	max_hitpoints = 125000
+	size_multiplier = 16
+	fleet_slot_size = 16
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	can_be_inspected = yes
+	
+	icon_frame = 12
+	text_icon = military_size_space_creature
+
+	base_buildtime = 1600
+
+	class = shipclass_military
+	is_designable = no
+	components_add_to_cost = no
+	enable_default_design = yes
+	auto_upgrade = no
+
+	# default_behaviour = Carrier
+    
+	#prerequisites = { "tech_bio_engineering_program" "tech_space_whale_weapon_1" "tech_titans" }
+
+	min_upgrade_cost = {
+		food = 500
+	}
+
+	required_component_set = bio_ftl_components
+	required_component_set = bio_propulsion_components
+	required_component_set = bio_sensors_components
+	required_component_set = bio_ship_aura_components
+
+	resources = {
+		category = ships
+		cost {
+			food = 8500
+		}
+		upkeep = {
+			food = 5
+		}
+	}
+}

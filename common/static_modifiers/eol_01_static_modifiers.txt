@@ -1,0 +1,57 @@
+leviathan_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+
+amoeba_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+} 
+amoeba_mother_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+ 
+amoeba_centenarian_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+ 
+calf_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+ 
+cow_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+ 
+bull_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+ 
+shardling_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+shard_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+quintessence_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+crystal_core_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+ 
+lesser_void_cloud_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+void_cloud_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+shroud_avatar_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+ 
+baby_dragon_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}
+ 
+devourer_timer = {
+	icon = "gfx/interface/icons/modifiers/mod_country_society_tech_research_speed.dds"
+}

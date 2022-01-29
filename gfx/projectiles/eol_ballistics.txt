@@ -1,0 +1,40 @@
+
+# BIO DISRUPTORS
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "large_bd_weapon"
+	color = { 0.6	1.0		0.7		0.05 }
+	hit_entity = "space_amoeba_weapon_hit_entity"
+	shield_hit_entity = "space_amoeba_weapon_shield_hit_entity"
+	muzzle_flash_entity = "space_amoeba_weapon_muzzle_entity"
+	
+	shield_impact = {
+		size = large
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "space_amoeba_weapon_projectile_entity"
+	speed = 200.0			#preferred speed of the projectile
+	max_duration = 2.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}
+
+projectile_gfx_ballistic = {
+	#common for all types of projectiles
+	name = "small_bd_weapon"
+	color = { 0.6	1.0		0.7		0.05 }
+	hit_entity = "small_space_amoeba_weapon_hit_entity"
+	shield_hit_entity = "small_space_amoeba_weapon_shield_hit_entity"
+	muzzle_flash_entity = "space_amoeba_weapon_muzzle_entity"
+	
+	shield_impact = {
+		size = small
+		delay = 0.0
+	}
+	
+	#ballistic specific
+	entity = "small_space_amoeba_weapon_projectile_entity"
+	speed = 200.0			#preferred speed of the projectile
+	max_duration = 2.0		#Speed of projectile might be scaled up in order to guarantee reaching the target within <max_duration> seconds
+}

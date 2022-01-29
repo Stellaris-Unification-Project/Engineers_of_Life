@@ -1,0 +1,109 @@
+#Lesser Space Cloud Section
+ship_section_template = {
+	key = "eng_imp_lesser_space_cloud_section"
+	ship_size = eng_imp_void_cloud_lesser
+	fits_on_slot = mid
+	entity = "empty_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		locatorname = "root"
+	}
+}
+
+# Space Cloud Section
+ship_section_template = {
+	key = "eng_imp_space_cloud_section"
+	ship_size = eng_imp_void_cloud
+	fits_on_slot = mid
+	entity = "space_cloud_section_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_02"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_03"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_04"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_05"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_06"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_07"
+		template = "large_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "LARGE_GUN_08"
+		template = "large_turret"
+		locatorname = "root"
+	}
+}
+
+# Shroud Avatar Section
+ship_section_template = {
+	key = "eng_imp_corrupted_psionic_avatar_section"
+	ship_size = eng_imp_corrupted_avatar
+	fits_on_slot = mid
+	entity = "shroud_creature_corrupted_01_entity"
+	icon = "GFX_ship_part_core_mid"
+	
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_03"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_04"
+		template = "medium_turret"
+		locatorname = "root"
+	}
+}

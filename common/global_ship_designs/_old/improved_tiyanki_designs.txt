@@ -1,0 +1,185 @@
+#####################################
+#				    #
+# 	       Tiyanki    	    #
+#				    #
+#####################################
+
+ship_design = {
+	name = "NAME_Eng_Tiyanki_Calf"
+	ship_size = eng_imp_space_whale_calf
+	is_event_design = yes
+	
+	section = {
+		template = "eng_imp_space_whale_calf_section"
+		slot = "mid"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component = "BIO_DRIVE_2"
+	required_component = "BIO_PROPULSION_2"
+	required_component = "BIO_SENSORS_2"
+}
+
+ship_design = {
+	name = "NAME_Eng_Tiyanki_Cow"
+	ship_size = eng_imp_space_whale_cow
+	is_event_design = yes
+	
+	section = {
+		template = "eng_imp_space_whale_cow_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_04"
+			template = "SMALL_BIO_DISRUPTOR"
+		}						
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component = "BIO_DRIVE_2"
+	required_component = "BIO_PROPULSION_2"
+	required_component = "BIO_SENSORS_2"
+	required_component = "BIO_SHIP_AURA_HEAL_PARASITES_CLOUD"
+}
+
+ship_design = {
+	name = "NAME_Eng_Tiyanki_Bull"
+	ship_size = eng_imp_space_whale_bull
+	is_event_design = yes
+	
+	section = {
+		template = "eng_imp_space_whale_bull_section"
+		slot = "mid"
+		
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "LARGE_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = "SMALL_BIO_DISRUPTOR"
+		}
+		component = {
+			slot = "SMALL_GUN_04"
+			template = "SMALL_BIO_DISRUPTOR"
+		}						
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component = "BIO_DRIVE_2"
+	required_component = "BIO_PROPULSION_2"
+	required_component = "BIO_SENSORS_2"
+	required_component = "BIO_SHIP_AURA_RAGE_PHEROMONES_CLOUD"
+}
+
+ship_design = {
+	name = "NAME_Eng_Progenitor"
+	ship_size = eng_imp_leviathan_01_elder_tiyanki
+	is_event_design = yes
+	
+	section = {
+		template = "eng_elderly_tiyanki_key"
+		slot = "mid"
+		
+		component = {
+			slot = "TITAN_01"
+			template = "IMP_ELDER_SPACE_WHALE_WEAPON"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "IMP_ELDER_SPACE_WHALE_SPIKE"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_TIYANKI_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_TIYANKI_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_TIYANKI_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_TIYANKI_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_TIYANKI_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_TIYANKI_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_7"
+			template = "LARGE_TIYANKI_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_8"
+			template = "LARGE_TIYANKI_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_9"
+			template = "LARGE_TIYANKI_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_10"
+			template = "LARGE_TIYANKI_ARMOR"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "AUTO_REPAIR"
+		}
+	}
+	required_component = "BIO_DRIVE_2"
+	required_component = "BIO_PROPULSION_2"
+	required_component = "BIO_SENSORS_2"
+	required_component = "BIO_SHIP_AURA_RAGE_PHEROMONES_CLOUD"
+	required_component = "BIO_SHIP_AURA_HEAL_PARASITES_CLOUD"
+}

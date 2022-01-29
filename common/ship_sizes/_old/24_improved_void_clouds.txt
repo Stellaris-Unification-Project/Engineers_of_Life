@@ -1,0 +1,193 @@
+#reloadable with 'reload stats'
+# This file is where you start when you want to configure something new, then go to sections
+
+@corvette_collision_radius = 2.0
+@destroyer_collision_radius = 2.5
+@cruiser_collision_radius = 3
+@battleship_collision_radius = 3
+@titan_collision_radius = 15
+
+@build_block_radius_none = 0
+@build_block_radius_civilian = 20
+@build_block_radius_military = 200
+
+@speed_very_slow = 80
+@speed_slow = 100
+@speed_default = 120
+@speed_fast = 140
+@speed_very_fast = 160
+
+####################
+#    VOID CLOUDS   #
+####################
+
+# Lesser Void Cloud
+eng_imp_void_cloud_lesser = {
+	graphical_culture = no
+	entity = space_cloud_entity
+	is_space_object = yes
+	max_speed = 215
+	rotation_speed = 0.15
+	acceleration = 0.35
+	formation_priority = @cruiser_formation_priority
+	collision_radius = @cruiser_collision_radius
+	modifier = {
+        ship_evasion_add = 65
+        ship_piracy_suppression_add = 5
+		ship_shield_add = 3000
+		ship_shield_regen_add_static = 25
+		ship_hull_regen_add_static = 4
+        ship_weapon_damage = 1.5
+	}
+	max_hitpoints = 1600
+	fleet_slot_size = 4
+	size_multiplier = 4
+	section_slots = { "mid" = { locator = "light_pos" } }
+	num_target_locators = 0
+	icon_frame = 12
+	text_icon = military_size_space_creature
+	
+	base_buildtime = 270
+
+	class = shipclass_military
+	is_designable = no
+	components_add_to_cost = no
+	enable_default_design = yes
+	auto_upgrade = no
+    
+	# default_behaviour = picket
+    
+	#prerequisites = { "tech_bio_engineering_program" "tech_psionic_theory" "tech_mine_zro" }
+
+	min_upgrade_cost = {
+		sr_zro = 10
+	}
+
+	required_component_set = bio_ftl_components
+	required_component_set = bio_propulsion_components
+	required_component_set = bio_sensors_components
+
+	resources = {
+		category = ships
+		cost {
+			energy = 550
+            sr_zro = 2
+		}
+		upkeep = {
+			energy = 0.45
+		}
+	}
+}
+
+# Void Cloud
+eng_imp_void_cloud = {
+	graphical_culture = no
+    entity = space_cloud_entity
+	is_space_object = yes
+	max_speed = 195
+	rotation_speed = 0.1
+	acceleration = 0.3
+    formation_priority = @battleship_formation_priority
+	collision_radius = @battleship_collision_radius
+	modifier = {
+        ship_evasion_add = 40
+        ship_piracy_suppression_add = 10
+		ship_shield_add = 12000
+		ship_shield_regen_add_static = 35
+		ship_hull_regen_add_static = 8
+        ship_weapon_damage = 3.0
+	}
+	max_hitpoints = 4400
+	size_multiplier = 8
+	fleet_slot_size = 8
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	icon_frame = 12
+	text_icon = military_size_space_creature
+	
+    base_buildtime = 800
+
+	class = shipclass_military
+	is_designable = no
+	components_add_to_cost = no
+	enable_default_design = yes
+	auto_upgrade = no
+    
+	# default_behaviour = picket
+    
+	#prerequisites = { "tech_bio_engineering_program" "tech_psionic_theory" "tech_mine_zro" }
+
+	min_upgrade_cost = {
+		sr_zro = 20
+	}
+
+	required_component_set = bio_ftl_components
+	required_component_set = bio_propulsion_components
+	required_component_set = bio_sensors_components
+
+	resources = {
+		category = ships
+		cost {
+			energy = 1100
+            sr_zro = 3
+		}
+		upkeep = {
+			energy = 0.75
+		}
+	}
+}
+
+# Shroud Avatar
+eng_imp_corrupted_avatar = {
+	graphical_culture = no
+    entity = shroud_creature_corrupted_01_entity
+	is_space_object = yes
+	max_speed = 175
+	rotation_speed = 1
+	acceleration = 0.2
+	modifier = {
+        ship_evasion_add = 25
+        ship_piracy_suppression_add = 15
+		ship_shield_add = 65000
+		ship_shield_regen_add_static = 45
+		ship_hull_regen_add_static = 14
+	}
+	max_hitpoints = 12000
+	size_multiplier = 16
+	fleet_slot_size = 16
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	icon_frame = 12
+	text_icon = military_size_space_creature
+	
+    base_buildtime = 1600
+
+	class = shipclass_military
+	is_designable = no
+	components_add_to_cost = no
+	enable_default_design = yes
+	auto_upgrade = no
+    
+	# default_behaviour = picket
+    
+	#prerequisites = { "tech_bio_engineering_program" "tech_psionic_theory" "tech_mine_zro" }
+
+	min_upgrade_cost = {
+		sr_zro = 40
+	}
+
+	required_component_set = bio_ftl_components
+	required_component_set = bio_propulsion_components
+	required_component_set = bio_sensors_components
+
+	resources = {
+		category = ships
+		cost {
+			energy = 7500
+            sr_zro = 100
+		}
+		upkeep = {
+			energy = 1.55
+		}
+	}
+}

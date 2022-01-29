@@ -1,0 +1,18 @@
+#####################################
+#                                   #
+# 	        Colony Ship             #
+#                                   #
+#####################################
+
+# Colony Ship
+ship_design = {
+	name = "NAME_life_seeder_colonizer"
+	ship_size = life_seeder_colonizer
+	is_event_design = yes
+	hide_size = yes
+
+	section = {
+		template = "DEFAULT_COLONIZATION_SECTION"
+		slot = "mid"
+	}
+}

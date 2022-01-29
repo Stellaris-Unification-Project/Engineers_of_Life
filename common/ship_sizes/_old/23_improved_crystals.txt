@@ -1,0 +1,246 @@
+#reloadable with 'reload stats'
+# This file is where you start when you want to configure something new, then go to sections
+
+@corvette_collision_radius = 2.0
+@destroyer_collision_radius = 2.5
+@cruiser_collision_radius = 3
+@battleship_collision_radius = 3
+@titan_collision_radius = 15
+
+@build_block_radius_none = 0
+@build_block_radius_civilian = 20
+@build_block_radius_military = 200
+
+@speed_very_slow = 80
+@speed_slow = 100
+@speed_default = 120
+@speed_fast = 140
+@speed_very_fast = 160
+
+####################
+#     CRYSTALS     #
+####################
+
+# Shardlings
+eng_imp_shardlings = {
+	graphical_culture = no
+	entity = eng_crystal_ship_small_blue_entity
+	is_space_object = yes
+	max_speed = 250
+	rotation_speed = 0.15
+	acceleration = 0.35
+	formation_priority = @corvette_formation_priority
+	collision_radius = @corvette_collision_radius
+	modifier = {
+		ship_evasion_add = 65
+		ship_piracy_suppression_add = 4
+		ship_armor_add = 200
+		ship_hull_regen_add_static = 2
+		ship_armor_regen_add_static = 2
+	}
+	max_hitpoints = 1200
+	fleet_slot_size = 1
+	size_multiplier = 1
+	section_slots = { "mid" = { locator = "light_pos" } }
+	num_target_locators = 0
+	icon_frame = 12
+	text_icon = military_size_space_creature
+	
+	base_buildtime = 85
+
+	class = shipclass_military
+	is_designable = no
+	components_add_to_cost = no
+	enable_default_design = yes
+	auto_upgrade = no
+    
+	# default_behaviour = picket
+    
+	#prerequisites = { "tech_bio_engineering_program" }
+
+	min_upgrade_cost = {
+		minerals = 50
+	}
+
+	required_component_set = bio_ftl_components
+	required_component_set = bio_propulsion_components
+	required_component_set = bio_sensors_components
+
+	resources = {
+		category = ships
+		cost {
+			minerals = 100
+            		rare_crystals = 2
+		}
+		upkeep = {
+			minerals = 0.15
+		}
+	}
+}
+
+# Shards
+eng_imp_shards = {
+	graphical_culture = no
+	entity = crystal_ship_blue_entity
+	is_space_object = yes
+	max_speed = 220
+	rotation_speed = 0.075
+	acceleration = 0.325
+	formation_priority = @destroyer_formation_priority
+	collision_radius = @destroyer_collision_radius
+	modifier = {
+		ship_evasion_add = @destroyer_evasion
+		ship_piracy_suppression_add = 6
+		ship_armor_add = 400
+		ship_hull_regen_add_static = 4
+		ship_armor_regen_add_static = 3
+	}
+	max_hitpoints = 2000
+	fleet_slot_size = 2
+	size_multiplier = 2
+	section_slots = { "mid" = { locator = "light_pos" } }
+	num_target_locators = 0
+	icon_frame = 12
+	text_icon = military_size_space_creature
+	
+	base_buildtime = 175
+
+	class = shipclass_military
+	is_designable = no
+	components_add_to_cost = no
+	enable_default_design = yes
+	auto_upgrade = no
+    
+	# default_behaviour = picket
+    
+	#prerequisites = { "tech_bio_engineering_program" "tech_crystal_armor_1" }
+
+	min_upgrade_cost = {
+		minerals = 100
+	}
+
+	required_component_set = bio_ftl_components
+	required_component_set = bio_propulsion_components
+	required_component_set = bio_sensors_components
+
+	resources = {
+		category = ships
+		cost {
+			minerals = 250
+            rare_crystals = 4
+		}
+		upkeep = {
+			minerals = 0.25
+		}
+	}
+}
+
+# Quintessence
+eng_imp_quintessence = {
+    graphical_culture = no
+	entity = crystal_ship_large_blue_entity
+	is_space_object = yes
+	max_speed = 195
+	rotation_speed = 0.025
+	acceleration = 0.25
+	modifier = {
+		ship_evasion_add = @cruiser_evasion
+		ship_piracy_suppression_add = 8
+		ship_armor_add = 800
+		ship_hull_regen_add_static = 6
+		ship_armor_regen_add_static = 5
+	}
+	max_hitpoints = 4000
+	size_multiplier = 4
+	fleet_slot_size = 4
+	section_slots = { "mid" = { locator = "light_pos" } }
+	num_target_locators = 0
+	icon_frame = 12
+	text_icon = military_size_space_creature
+    
+    base_buildtime = 295
+    
+	class = shipclass_military
+	is_designable = no
+    components_add_to_cost = no
+	enable_default_design = yes
+	auto_upgrade = no
+    
+	# default_behaviour = picket
+    
+	#prerequisites = { "tech_bio_engineering_program" "tech_crystal_armor_2" }
+
+	min_upgrade_cost = {
+		minerals = 200
+	}
+
+	required_component_set = bio_ftl_components
+	required_component_set = bio_propulsion_components
+	required_component_set = bio_sensors_components
+
+	resources = {
+		category = ships
+		cost {
+			minerals = 400
+            rare_crystals = 8
+		}
+		upkeep = {
+			minerals = 0.4
+		}
+	}
+}
+
+# Station
+eng_imp_crystal_station_large = {
+    graphical_culture = no
+	entity = crystal_station_large_entity
+	max_speed = 95
+	acceleration = 0.1
+	rotation_speed = 0.05
+	modifier = {
+		ship_evasion_add = @titan_evasion
+		ship_piracy_suppression_add = 20
+		ship_armor_add = 2000
+		ship_hull_regen_add_static = 11
+		ship_armor_regen_add_static = 10
+	}
+	max_hitpoints = 50000
+	combat_size_multiplier = 20
+	size_multiplier = 8
+	fleet_slot_size = 8
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 0
+	icon_frame = 12
+	text_icon = military_size_space_creature
+    
+    base_buildtime = 1000
+	
+	class = shipclass_military
+	is_designable = no
+    components_add_to_cost = no
+	enable_default_design = yes
+	auto_upgrade = no
+    
+    # default_behaviour = picket
+    
+	#prerequisites = { "tech_bio_engineering_program" "tech_crystal_armor_1" "tech_crystal_armor_2" }
+
+	min_upgrade_cost = {
+		minerals = 1000
+	}
+
+	required_component_set = bio_propulsion_components
+	required_component_set = bio_sensors_components
+
+	resources = {
+		category = ships
+		cost {
+			minerals = 4000
+            rare_crystals = 200
+		}
+		upkeep = {
+			minerals = 10
+            rare_crystals = 3
+		}
+	}
+}

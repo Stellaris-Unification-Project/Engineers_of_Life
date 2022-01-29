@@ -1,0 +1,12 @@
+# This file configures pre-scripted designs the game will use. 
+
+# Colony Ship
+ship_design = {
+	name = "NAME_life_seeder_colonizer"
+	ship_size = life_seeder_colonizer
+
+	section = {
+		template = "DEFAULT_COLONIZATION_SECTION"
+		slot = "mid"
+	}
+}

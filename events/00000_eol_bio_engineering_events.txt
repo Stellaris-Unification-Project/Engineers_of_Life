@@ -1,0 +1,5297 @@
+namespace = eolbioengfac
+
+##### Bio Engineering Facility - Construction Platform built ######
+
+country_event = {
+	id = eolbioengfac.1
+	title = "eolbioengfac.1.name"
+	desc = "eolbioengfac.1.desc"
+	picture = GFX_evt_megastructure_construction
+	show_sound = event_dyson_sphere_build_start
+	is_triggered_only = yes
+	option = { name = "eolbioengfac.1.a" }
+}
+
+##### Bio Engineering Facility - Finished ######
+
+country_event = {
+	id = eolbioengfac.2
+	title = "eolbioengfac.2.name"
+	desc = "eolbioengfac.2.desc"
+	picture = GFX_evt_decryption
+	show_sound = event_dyson_sphere_build_upgrade_frame
+	is_triggered_only = yes
+	option = { name = "eolbioengfac.2.a" }
+}
+
+##### Activate Bredding Menu #####
+
+country_event = {
+	id = eolbioengfac.3
+	title = "eolbioengfac.3.name"
+	desc = "eolbioengfac.3.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+
+	immediate = {
+		set_country_flag = bioeng_breeding
+		if = {
+			limit = { 
+				OR = {
+					any_owned_megastructure = { is_megastructure_type = bio_engineering_ready } 
+					has_country_flag = bioeng_breeding
+				}
+			}
+			
+			random_owned_megastructure = {
+				limit = { is_megastructure_type = bio_engineering_ready }
+
+				remove_megastructure = this
+				solar_system = {
+					spawn_megastructure = {
+						type = bio_engineering_facility_1
+						owner = root
+					}
+				}
+			}
+		}
+	}
+
+	after = {
+		remove_country_flag = bioeng_breeding
+	}
+
+	### Space Amoebas ###
+	option = {
+		name = "eolbioengfac.3.a"
+		custom_tooltip = eolbioengfac.3.a.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.4 }
+		}
+		allow = {
+			owner = { has_technology = tech_bio_engineering_program }
+		}
+	}
+
+	### Tiyanki Space Whales ###
+	option = {
+		name = "eolbioengfac.3.b"
+		custom_tooltip = eolbioengfac.3.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.5 }
+		}
+		allow = {
+			owner = { has_technology = tech_bio_engineering_program }
+		}
+	}
+
+	### Crystalline Entities ###
+	option = {
+		name = "eolbioengfac.3.c"
+		custom_tooltip = eolbioengfac.3.c.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.6 }
+		}
+		allow = {
+			owner = { 
+                has_technology = tech_bio_engineering_program 
+                has_technology = tech_mine_rare_crystals
+            }
+		}
+	}
+
+	### Void Clouds ###
+	option = {
+		name = "eolbioengfac.3.d"
+		custom_tooltip = eolbioengfac.3.d.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.7 }
+		}
+		allow = {
+			owner = { 
+                has_technology = tech_psionic_theory 
+                has_technology = tech_mine_zro
+            }
+		}
+	}
+
+	### Voidspawn ###
+	option = {
+		name = "eolbioengfac.3.e"
+		custom_tooltip = eolbioengfac.3.e.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.8 }
+		}
+		allow = {
+			owner = { has_ascension_perk = ap_leviathan_engineering }
+		}
+	}
+
+	### Ether Drake ###
+	option = {
+		name = "eolbioengfac.3.f"
+		custom_tooltip = eolbioengfac.3.f.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.9 }
+		}
+		allow = {
+			owner = { has_ascension_perk = ap_leviathan_engineering }
+		}
+	}
+
+	### Dimensional Horror ###
+	option = {
+		name = "eolbioengfac.3.g"
+		custom_tooltip = eolbioengfac.3.g.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.10 }
+		}
+		allow = {
+			owner = { 
+				has_ascension_perk = ap_leviathan_engineering
+				has_technology = tech_psionic_theory
+			}
+		}
+	}
+
+	### Stellar Devourer ###
+	option = {
+		name = "eolbioengfac.3.h"
+		custom_tooltip = eolbioengfac.3.h.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.11 }
+		}
+		allow = {
+			owner = { 
+				has_ascension_perk = ap_leviathan_engineering
+				has_ascension_perk = ap_ultimate_leviathan_engineering
+			}
+		}
+	}
+}
+
+### Amoeba Menu ###
+country_event = {
+	id = eolbioengfac.4
+	title = "eolbioengfac.4.name"
+	desc = "eolbioengfac.4.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+
+	### Space Amoeba Hatchling ###
+	option = {
+		name = "eolbioengfac.4.a"
+		custom_tooltip = eolbioengfac.4.a.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.12 }
+		}
+		allow = {
+			owner = { 
+                has_technology = tech_bio_engineering_program
+                NOR = {
+                    has_modifier = amoeba_timer
+                }
+            }
+		}
+	}
+
+	### Space Amoeba Mother ###
+	option = {
+		name = "eolbioengfac.4.b"
+		custom_tooltip = eolbioengfac.4.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.13 }
+		}
+		allow = {
+			owner = { 
+                has_technology = tech_amoeba_strike_craft_1 
+                NOR = {
+                    has_modifier = amoeba_mother_timer
+                }
+            }
+		}
+	}
+
+	### Space Amoeba Centenarian ###
+	option = {
+		name = "eolbioengfac.4.c"
+		custom_tooltip = eolbioengfac.4.c.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.14 }
+		}
+		allow = {
+			owner = { 
+                has_technology = tech_amoeba_strike_craft_2
+                NOR = {
+                    has_modifier = amoeba_centenarian_timer
+                }
+            }
+		}
+	}
+
+	### Go back ###
+	option = {
+		name = "eolbioengfac.4.d"
+		custom_tooltip = eolbioengfac.4.d.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.3 }
+		}
+	}
+}
+
+### Tiyanki Menu ###
+country_event = {
+	id = eolbioengfac.5
+	title = "eolbioengfac.5.name"
+	desc = "eolbioengfac.5.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+
+	### Tiyanki Calf ###
+	option = {
+		name = "eolbioengfac.5.a"
+		custom_tooltip = eolbioengfac.5.a.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.15 }
+		}
+		allow = {
+			owner = { has_technology = tech_bio_engineering_program }
+            NOR = {
+                has_modifier = calf_timer
+            }
+		}
+	}
+
+	### Tiyanki Cow ###
+	option = {
+		name = "eolbioengfac.5.b"
+		custom_tooltip = eolbioengfac.5.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.16 }
+		}
+		allow = {
+			owner = { has_technology = tech_space_whale_weapon_1 }
+            NOR = {
+                has_modifier = cow_timer
+            }
+		}
+	}
+
+	### Tiyanki Bull ###
+	option = {
+		name = "eolbioengfac.5.c"
+		custom_tooltip = eolbioengfac.5.c.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.17 }
+		}
+		allow = {
+			owner = { has_technology = tech_space_whale_weapon_1 }
+            NOR = {
+                has_modifier = bull_timer
+            }
+		}
+	}
+    
+    ### Tiyanki Matriarch ###
+    option = {
+		name = "eolbioengfac.5.d"
+		custom_tooltip = eolbioengfac.5.d.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.18 }
+            if = {
+                limit = {
+                    AND = {
+                        count_owned_ship = {
+                            limit = { is_ship_size = eng_imp_leviathan_01_elder_tiyanki }
+                            count < 3
+                        }
+                        has_country_flag = matriarch_limit_reached
+                    }
+                }
+                remove_country_flag = matriarch_limit_reached
+            }
+		}
+		allow = {
+			owner = { 
+                has_technology = tech_space_whale_weapon_1
+                has_ascension_perk = ap_leviathan_engineering
+                NOR = {
+                    has_modifier = leviathan_timer
+                }
+            }
+		}
+	}
+
+	### Go back ###
+	option = {
+		name = "eolbioengfac.5.e"
+		custom_tooltip = eolbioengfac.5.e.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.3 }
+		}
+	}
+}
+
+### Crystal Menu ###
+country_event = {
+	id = eolbioengfac.6
+	title = "eolbioengfac.6.name"
+	desc = "eolbioengfac.6.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+
+	### Crystal Shardling ###
+	option = {
+		name = "eolbioengfac.6.a"
+		custom_tooltip = eolbioengfac.6.a.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.19 }
+		}
+		allow = {
+			owner = { 
+                has_technology = tech_bio_engineering_program
+                NOR = {
+                    has_modifier = shardling_timer
+                }
+            }
+		}
+	}
+
+	### Crystal Shard ###
+	option = {
+		name = "eolbioengfac.6.b"
+		custom_tooltip = eolbioengfac.6.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.20 }
+		}
+		allow = {
+			owner = { 
+                has_technology = tech_crystal_armor_1
+                NOR = {
+                    has_modifier = shard_timer
+                }
+            }
+		}
+	}
+
+	### Crystal Quintessence ###
+	option = {
+		name = "eolbioengfac.6.c"
+		custom_tooltip = eolbioengfac.6.c.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.21 }
+		}
+		allow = {
+			owner = { 
+                has_technology = tech_crystal_armor_2
+                NOR = {
+                    has_modifier = quintessence_timer
+                }
+            }
+		}
+	}
+    
+    ### Crystal Core ###
+    option = {
+		name = "eolbioengfac.6.d"
+		custom_tooltip = eolbioengfac.6.d.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.22 }
+            if = {
+                limit = {
+                    AND = {
+                        count_owned_ship = {
+                            limit = { is_ship_size = eng_imp_crystal_station_large }
+                            count < 10
+                        }
+                        has_country_flag = crystal_core_limit_reached
+                    }
+                }
+                remove_country_flag = crystal_core_limit_reached
+            }
+		}
+		allow = {
+			owner = { 
+                has_technology = tech_crystal_armor_1
+                has_technology = tech_crystal_armor_2
+                has_ascension_perk = ap_leviathan_engineering
+                NOR = {
+                    has_modifier = crystal_core_timer
+                }
+            }
+		}
+	}
+
+	### Go back ###
+	option = {
+		name = "eolbioengfac.6.e"
+		custom_tooltip = eolbioengfac.6.e.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.3 }
+		}
+	}
+}
+
+### Void Cloud Menu ###
+country_event = {
+	id = eolbioengfac.7
+	title = "eolbioengfac.7.name"
+	desc = "eolbioengfac.7.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+
+	### Lesser Void Cloud ###
+	option = {
+		name = "eolbioengfac.7.a"
+		custom_tooltip = eolbioengfac.7.a.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.23 }
+		}
+		allow = {
+			owner = { 
+                has_technology = tech_psionic_theory
+                NOR = {
+                    has_modifier = lesser_void_cloud_timer
+                }
+            }
+		}
+	}
+
+	### Void Cloud ###
+	option = {
+		name = "eolbioengfac.7.b"
+		custom_tooltip = eolbioengfac.7.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.24 }
+		}
+		allow = {
+			owner = {
+                has_technology = tech_psionic_theory
+                NOR = {
+                    has_modifier = void_cloud_timer
+                }
+            }
+		}
+	}
+    
+    ### Shroud Avatar ###
+    option = {
+		name = "eolbioengfac.7.c"
+		custom_tooltip = eolbioengfac.7.c.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.25 }
+            if = {
+                limit = {
+                    AND = {
+                        count_owned_ship = {
+                            limit = { is_ship_size = eng_imp_corrupted_avatar }
+                            count < 5
+                        }
+                        has_country_flag = avatar_limit_reached
+                    }
+                }
+                remove_country_flag = avatar_limit_reached
+            }
+		}
+		allow = {
+			owner = { 
+                has_technology = tech_psionic_theory
+                has_ascension_perk = ap_leviathan_engineering
+                NOR = {
+                    has_modifier = shroud_avatar_timer
+                }
+            }
+		}
+	}
+
+	### Go back ###
+	option = {
+		name = "eolbioengfac.7.d"
+		custom_tooltip = eolbioengfac.7.d.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.3 }
+		}
+	}
+}
+
+### Voidspawn Menu ###
+country_event = {
+	id = eolbioengfac.8
+	title = "eolbioengfac.8.name"
+	desc = "eolbioengfac.8.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+
+	option = {
+		name = "eolbioengfac.8.a"
+		custom_tooltip = eolbioengfac.8.a.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.26 }
+            if = {
+                limit = {
+                    AND = {
+                        count_owned_ship = {
+                            limit = { is_ship_size = eng_imp_leviathan_01_voidspawn }
+                            count < 3
+                        }
+                        has_country_flag = voidspawn_limit_reached
+                    }
+                }
+                remove_country_flag = voidspawn_limit_reached
+            }
+		}
+		allow = {
+			owner = {
+                has_ascension_perk = ap_leviathan_engineering
+                NOR = {
+                    has_modifier = leviathan_timer
+                }
+            }
+		}
+	}
+
+	### Go back ###
+	option = {
+		name = "eolbioengfac.8.b"
+		custom_tooltip = eolbioengfac.8.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.3 }
+		}
+	}
+}
+
+### Ether Drake Menu ###
+country_event = {
+	id = eolbioengfac.9
+	title = "eolbioengfac.9.name"
+	desc = "eolbioengfac.9.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+
+	option = {
+		name = "eolbioengfac.9.a"
+		custom_tooltip = eolbioengfac.9.a.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.27 }
+            if = {
+                limit = {
+                    AND = {
+                        count_owned_ship = {
+                            limit = { is_ship_size = eng_imp_space_dragon_baby }
+                            count < 8
+                        }
+                        has_country_flag = dragon_baby_limit_reached
+                    }
+                }
+                remove_country_flag = dragon_baby_limit_reached
+            }
+		}
+		allow = {
+			owner = {
+                has_ascension_perk = ap_leviathan_engineering
+                NOR = {
+                    has_modifier = baby_dragon_timer
+                }
+            }
+		}
+	}
+    
+    option = {
+		name = "eolbioengfac.9.b"
+		custom_tooltip = eolbioengfac.9.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.28 }
+            if = {
+                limit = {
+                    AND = {
+                        count_owned_ship = {
+                            limit = { is_ship_size = eng_imp_space_dragon }
+                            count < 3
+                        }
+                        has_country_flag = dragon_limit_reached
+                    }
+                }
+                remove_country_flag = dragon_limit_reached
+            }
+		}
+		allow = {
+			owner = {
+                has_ascension_perk = ap_leviathan_engineering
+                NOR = {
+                    has_modifier = leviathan_timer
+                }
+            }
+		}
+	}
+
+	### Go back ###
+	option = {
+		name = "eolbioengfac.9.c"
+		custom_tooltip = eolbioengfac.9.c.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.3 }
+		}
+	}
+}
+
+### Dimensional Horror Menu ###
+country_event = {
+	id = eolbioengfac.10
+	title = "eolbioengfac.10.name"
+	desc = "eolbioengfac.10.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+
+	option = {
+		name = "eolbioengfac.10.a"
+		custom_tooltip = eolbioengfac.10.a.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.29 }
+            if = {
+                limit = {
+                    AND = {
+                        count_owned_ship = {
+                            limit = { is_ship_size = eng_imp_dimensional_horror }
+                            count < 3
+                        }
+                        has_country_flag = dimensional_horror_limit_reached
+                    }
+                }
+                remove_country_flag = dimensional_horror_limit_reached
+            }
+		}
+		allow = {
+			owner = {
+                has_technology = tech_psionic_theory
+                has_ascension_perk = ap_leviathan_engineering
+                NOR = {
+                    has_modifier = leviathan_timer
+                }
+            }
+		}
+	}
+
+	### Go back ###
+	option = {
+		name = "eolbioengfac.10.b"
+		custom_tooltip = eolbioengfac.10.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.3 }
+		}
+	}
+}
+
+### Stellar Devourer Menu ###
+country_event = {
+	id = eolbioengfac.11
+	title = "eolbioengfac.11.name"
+	desc = "eolbioengfac.11.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+
+	option = {
+		name = "eolbioengfac.11.a"
+		custom_tooltip = eolbioengfac.11.a.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.30 }
+            if = {
+                limit = {
+                    AND = {
+                        count_owned_ship = {
+                            limit = { is_ship_size = eng_imp_stellar_devourer }
+                            count < 2
+                        }
+                        has_country_flag = devourer_limit_reached
+                    }
+                }
+                remove_country_flag = devourer_limit_reached
+            }
+		}
+		allow = {
+			owner = {
+                has_ascension_perk = ap_leviathan_engineering
+                has_ascension_perk = ap_ultimate_leviathan_engineering
+                NOR = {
+                    has_modifier = devourer_timer
+                }
+            }
+		}
+	}
+
+	### Go back ###
+	option = {
+		name = "eolbioengfac.11.b"
+		custom_tooltip = eolbioengfac.11.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.3 }
+		}
+	}
+}
+
+### Space Amoeba Hatchlings ###
+country_event = {
+	id = eolbioengfac.12
+	title = "eolbioengfac.12.name"
+	desc = "eolbioengfac.12.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+    location = fromfromfrom
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+
+	option = {
+		name = "eolbioengfac.12.a"
+		custom_tooltip = eolbioengfac.12.a.tooltip
+		owner = {
+			add_resource = { food = -150 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Hatchling"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Small_Space_Organism_Zebra"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_timer
+                days = 360
+            }
+        }
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+				resource_stockpile_compare = {
+					resource = food
+					value >= 150
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.12.b"
+		custom_tooltip = eolbioengfac.12.b.tooltip
+		owner = {
+			add_resource = { food = -750 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Hatchlings"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 5
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Small_Space_Organism_Zebra"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+				resource_stockpile_compare = {
+					resource = food
+					value >= 750
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.12.c"
+		custom_tooltip = eolbioengfac.12.c.tooltip
+		owner = {
+			add_resource = { food = -1500 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Hatchling_Group"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 10
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Small_Space_Organism_Zebra"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+				resource_stockpile_compare = {
+					resource = food
+					value >= 1500
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.12.d"
+		custom_tooltip = eolbioengfac.12.d.tooltip
+		owner = {
+			add_resource = { food = -7500 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Hatchling_Gathering"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 50
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Small_Space_Organism_Zebra"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+				resource_stockpile_compare = {
+					resource = food
+					value >= 7500
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.12.e"
+		custom_tooltip = eolbioengfac.12.e.tooltip
+		owner = {
+			add_resource = { food = -15000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Hatchling_Swarm"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 100
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Small_Space_Organism_Zebra"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+				resource_stockpile_compare = {
+					resource = food
+					value >= 15000
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.12.f"
+		custom_tooltip = eolbioengfac.12.f.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.4 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Space Amoeba Mothers ###
+country_event = {
+	id = eolbioengfac.13
+	title = "eolbioengfac.13.name"
+	desc = "eolbioengfac.13.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.13.a"
+		custom_tooltip = eolbioengfac.13.a.tooltip
+		owner = {
+			add_resource = { food = -550 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Mother"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Large_Space_Organism_Zebra"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_mother_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_amoeba_strike_craft_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 550
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.13.b"
+		custom_tooltip = eolbioengfac.13.b.tooltip
+		owner = {
+			add_resource = { food = -2750 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Mothers"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 5
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Large_Space_Organism_Zebra"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_mother_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_amoeba_strike_craft_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 2750
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.13.c"
+		custom_tooltip = eolbioengfac.13.c.tooltip
+		owner = {
+			add_resource = { food = -5500 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Mother_Group"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 10
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Large_Space_Organism_Zebra"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_mother_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_amoeba_strike_craft_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 5500
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.13.d"
+		custom_tooltip = eolbioengfac.13.d.tooltip
+		owner = {
+			add_resource = { food = -27500 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Mother_Gathering"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 50
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Large_Space_Organism_Zebra"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_mother_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_amoeba_strike_craft_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 27500
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.13.e"
+		custom_tooltip = eolbioengfac.13.e.tooltip
+		owner = {
+			add_resource = { food = -55000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Mother_Swarm"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 100
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Large_Space_Organism_Zebra"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_mother_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_amoeba_strike_craft_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 55000
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.13.f"
+		custom_tooltip = eolbioengfac.13.f.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.4 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Space Amoeba Centenerians ###
+country_event = {
+	id = eolbioengfac.14
+	title = "eolbioengfac.14.name"
+	desc = "eolbioengfac.14.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+
+	option = {
+		name = "eolbioengfac.14.a"
+		custom_tooltip = eolbioengfac.14.a.tooltip
+		owner = {
+			add_resource = { food = -1100 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Centenarian"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Cente"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_centenarian_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_amoeba_strike_craft_2
+				resource_stockpile_compare = {
+					resource = food
+					value >= 1100
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.14.b"
+		custom_tooltip = eolbioengfac.14.b.tooltip
+		owner = {
+			add_resource = { food = -5500 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Centenarians"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 5
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Cente"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_centenarian_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_amoeba_strike_craft_2
+				resource_stockpile_compare = {
+					resource = food
+					value >= 5500
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.14.c"
+		custom_tooltip = eolbioengfac.14.c.tooltip
+		owner = {
+			add_resource = { food = -11000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Centenarian_Group"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 10
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Cente"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_centenarian_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_amoeba_strike_craft_2
+				resource_stockpile_compare = {
+					resource = food
+					value >= 11000
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.14.d"
+		custom_tooltip = eolbioengfac.14.d.tooltip
+		owner = {
+			add_resource = { food = -55000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Amoeba_Centenarian_Gathering"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 50
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Cente"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = amoeba_centenarian_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_amoeba_strike_craft_2
+				resource_stockpile_compare = {
+					resource = food
+					value >= 55000
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.14.e"
+		custom_tooltip = eolbioengfac.14.e.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.4 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Tiyanki Calf ###
+country_event = {
+	id = eolbioengfac.15
+	title = "eolbioengfac.15.name"
+	desc = "eolbioengfac.15.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.15.a"
+		custom_tooltip = eolbioengfac.15.a.tooltip
+		owner = {
+			add_resource = { food = -200 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Calf"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Calf"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = calf_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+				resource_stockpile_compare = {
+					resource = food
+					value >= 200
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.15.b"
+		custom_tooltip = eolbioengfac.15.b.tooltip
+		owner = {
+			add_resource = { food = -1000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Calfs"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 5
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Calf"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = calf_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+				resource_stockpile_compare = {
+					resource = food
+					value >= 1000
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.15.c"
+		custom_tooltip = eolbioengfac.15.c.tooltip
+		owner = {
+			add_resource = { food = -2000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Calf_Group"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 10
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Calf"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = calf_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+				resource_stockpile_compare = {
+					resource = food
+					value >= 2000
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.15.d"
+		custom_tooltip = eolbioengfac.15.d.tooltip
+		owner = {
+			add_resource = { food = -10000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Calf_Herd"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 50
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Calf"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = calf_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+				resource_stockpile_compare = {
+					resource = food
+					value >= 10000
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.15.e"
+		custom_tooltip = eolbioengfac.15.e.tooltip
+		owner = {
+			add_resource = { food = -20000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Calf_Swarm"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 100
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Calf"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = calf_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+				resource_stockpile_compare = {
+					resource = food
+					value >= 20000
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.15.f"
+		custom_tooltip = eolbioengfac.15.f.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.5 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Tiyanki Cow ###
+country_event = {
+	id = eolbioengfac.16
+	title = "eolbioengfac.16.name"
+	desc = "eolbioengfac.16.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.16.a"
+		custom_tooltip = eolbioengfac.16.a.tooltip
+		owner = {
+			add_resource = { food = -350 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Cow"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Cow"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = cow_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_space_whale_weapon_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 350
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.16.b"
+		custom_tooltip = eolbioengfac.16.b.tooltip
+		owner = {
+			add_resource = { food = -1750 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Cows"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 5
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Cow"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = cow_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_space_whale_weapon_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 1750
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.16.c"
+		custom_tooltip = eolbioengfac.16.c.tooltip
+		owner = {
+			add_resource = { food = -3500 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Cow_Group"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 10
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Cow"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = cow_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_space_whale_weapon_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 3500
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.16.d"
+		custom_tooltip = eolbioengfac.16.d.tooltip
+		owner = {
+			add_resource = { food = -17500 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Cow_Herd"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 50
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Cow"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = cow_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_space_whale_weapon_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 17500
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.16.e"
+		custom_tooltip = eolbioengfac.16.e.tooltip
+		owner = {
+			add_resource = { food = -35000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Cow_Swarm"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 100
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Cow"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = cow_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_space_whale_weapon_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 35000
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.16.f"
+		custom_tooltip = eolbioengfac.16.f.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.5 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Tiyanki Bull ###
+country_event = {
+	id = eolbioengfac.17
+	title = "eolbioengfac.17.name"
+	desc = "eolbioengfac.17.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.17.a"
+		custom_tooltip = eolbioengfac.17.a.tooltip
+		owner = {
+			add_resource = { food = -350 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Bull"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Bull"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = bull_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_space_whale_weapon_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 350
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.17.b"
+		custom_tooltip = eolbioengfac.17.b.tooltip
+		owner = {
+			add_resource = { food = -1750 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Bulls"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 5
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Bull"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = bull_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_space_whale_weapon_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 1750
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.17.c"
+		custom_tooltip = eolbioengfac.17.c.tooltip
+		owner = {
+			add_resource = { food = -3500 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Bull_Group"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 10
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Bull"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = bull_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_space_whale_weapon_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 3500
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.17.d"
+		custom_tooltip = eolbioengfac.17.d.tooltip
+		owner = {
+			add_resource = { food = -17500 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Bull_Herd"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 50
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Bull"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = bull_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_space_whale_weapon_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 17500
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.17.e"
+		custom_tooltip = eolbioengfac.17.e.tooltip
+		owner = {
+			add_resource = { food = -35000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Bull_Swarm"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 100
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Tiyanki_Bull"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = bull_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_space_whale_weapon_1
+				resource_stockpile_compare = {
+					resource = food
+					value >= 35000
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.17.f"
+		custom_tooltip = eolbioengfac.17.f.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.5 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Tiyanki Matriarch ###
+country_event = {
+	id = eolbioengfac.18
+	title = "eolbioengfac.18.name"
+	desc = "eolbioengfac.18.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.18.a"
+		custom_tooltip = eolbioengfac.18.a.tooltip
+		owner = {
+			add_resource = { food = -8500 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Tiyanki_Matriarch"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Progenitor"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            if = {
+                limit = {
+                    count_owned_ship = {
+                        limit = { is_ship_size = eng_imp_leviathan_01_elder_tiyanki }
+                        count = 3
+                    }
+                }
+                set_country_flag = matriarch_limit_reached
+            }
+            add_modifier = {
+                modifier = leviathan_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_space_whale_weapon_1
+                has_ascension_perk = ap_leviathan_engineering
+				resource_stockpile_compare = {
+					resource = food
+					value >= 8500
+				}
+                NOT = {
+                    has_country_flag = matriarch_limit_reached
+                }
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.18.b"
+		custom_tooltip = eolbioengfac.18.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.5 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Crystal Shardlings ###
+country_event = {
+	id = eolbioengfac.19
+	title = "eolbioengfac.19.name"
+	desc = "eolbioengfac.19.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.19.a"
+		custom_tooltip = eolbioengfac.19.a.tooltip
+		owner = {
+			add_resource = { minerals = -100 }
+            add_resource = { rare_crystals = -2 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Shardling"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Shardling"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = shardling_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 100
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 2
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.19.b"
+		custom_tooltip = eolbioengfac.19.b.tooltip
+		owner = {
+			add_resource = { minerals = -500 }
+            add_resource = { rare_crystals = -10 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Shardlings"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 5
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Shardling"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = shardling_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 500
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 10
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.19.c"
+		custom_tooltip = eolbioengfac.19.c.tooltip
+		owner = {
+			add_resource = { minerals = -1000 }
+            add_resource = { rare_crystals = -20 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Shardling_Group"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 10
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Shardling"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = shardling_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 1000
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 20
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.19.d"
+		custom_tooltip = eolbioengfac.19.d.tooltip
+		owner = {
+			add_resource = { minerals = -5000 }
+            add_resource = { rare_crystals = -100 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Shardling_Compound"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 50
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Shardling"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = shardling_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 5000
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 100
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.19.e"
+		custom_tooltip = eolbioengfac.19.e.tooltip
+		owner = {
+			add_resource = { minerals = -10000 }
+            add_resource = { rare_crystals = -200 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Shardling_Union"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 100
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Shardling"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = shardling_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_bio_engineering_program
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 10000
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 200
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.19.f"
+		custom_tooltip = eolbioengfac.19.f.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.6 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Crystal Shard ###
+country_event = {
+	id = eolbioengfac.20
+	title = "eolbioengfac.20.name"
+	desc = "eolbioengfac.20.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.20.a"
+		custom_tooltip = eolbioengfac.20.a.tooltip
+		owner = {
+			add_resource = { minerals = -250 }
+            add_resource = { rare_crystals = -4 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Shard"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Shard"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = shard_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_crystal_armor_1
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 250
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 4
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.20.b"
+		custom_tooltip = eolbioengfac.20.b.tooltip
+		owner = {
+			add_resource = { minerals = -1250 }
+            add_resource = { rare_crystals = -20 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Shards"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 5
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Shard"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = shard_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_crystal_armor_1
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 1250
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 20
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.20.c"
+		custom_tooltip = eolbioengfac.20.c.tooltip
+		owner = {
+			add_resource = { minerals = -2500 }
+            add_resource = { rare_crystals = -40 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Shard_Group"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 10
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Shard"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = shard_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_crystal_armor_1
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 2500
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 40
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.20.d"
+		custom_tooltip = eolbioengfac.20.d.tooltip
+		owner = {
+			add_resource = { minerals = -12500 }
+            add_resource = { rare_crystals = -200 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Shard_Compound"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 50
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Shard"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = shard_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_crystal_armor_1
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 12500
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 200
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.20.e"
+		custom_tooltip = eolbioengfac.20.e.tooltip
+		owner = {
+			add_resource = { minerals = -25000 }
+            add_resource = { rare_crystals = -400 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Shard_Union"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 100
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Shard"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = shard_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_crystal_armor_1
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 25000
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 400
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.20.f"
+		custom_tooltip = eolbioengfac.20.f.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.6 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Crystal Quintessence ###
+country_event = {
+	id = eolbioengfac.21
+	title = "eolbioengfac.21.name"
+	desc = "eolbioengfac.21.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.21.a"
+		custom_tooltip = eolbioengfac.21.a.tooltip
+		owner = {
+			add_resource = { minerals = -400 }
+            add_resource = { rare_crystals = -8 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Quintessence"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Quintessence"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = quintessence_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_crystal_armor_2
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 400
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 8
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.21.b"
+		custom_tooltip = eolbioengfac.21.b.tooltip
+		owner = {
+			add_resource = { minerals = -2000 }
+            add_resource = { rare_crystals = -40 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Quintessences"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 5
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Quintessence"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = quintessence_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_crystal_armor_2
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 2000
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 40
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.21.c"
+		custom_tooltip = eolbioengfac.21.c.tooltip
+		owner = {
+			add_resource = { minerals = -4000 }
+            add_resource = { rare_crystals = -80 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Quintessence_Group"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 10
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Quintessence"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = quintessence_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_crystal_armor_2
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 4000
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 80
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.21.d"
+		custom_tooltip = eolbioengfac.21.d.tooltip
+		owner = {
+			add_resource = { minerals = -20000 }
+            add_resource = { rare_crystals = -400 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Quintessence_Compound"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 50
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Quintessence"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = quintessence_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_crystal_armor_2
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 20000
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 400
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.21.e"
+		custom_tooltip = eolbioengfac.21.e.tooltip
+		owner = {
+			add_resource = { minerals = -40000 }
+            add_resource = { rare_crystals = -800 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Quintessence_Union"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 100
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Quintessence"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = quintessence_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_crystal_armor_2
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 40000
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 800
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.21.f"
+		custom_tooltip = eolbioengfac.21.f.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.6 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Crystal Core ###
+country_event = {
+	id = eolbioengfac.22
+	title = "eolbioengfac.22.name"
+	desc = "eolbioengfac.22.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.22.a"
+		custom_tooltip = eolbioengfac.22.a.tooltip
+		owner = {
+			add_resource = { minerals = -4000 }
+            add_resource = { rare_crystals = -200 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Crystal_Core"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Crystal_Nidus"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            if = {
+                limit = {
+                    count_owned_ship = {
+                        limit = { is_ship_size = eng_imp_crystal_station_large }
+                        count = 10
+                    }
+                }
+                set_country_flag = crystal_core_limit_reached
+            }
+            add_modifier = {
+                modifier = crystal_core_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_crystal_armor_1
+                has_technology = tech_crystal_armor_2
+                has_technology = tech_mine_rare_crystals
+				resource_stockpile_compare = {
+					resource = minerals
+					value >= 4000
+				}
+                resource_stockpile_compare = {
+					resource = rare_crystals
+					value >= 200
+				}
+                NOT = {
+                    has_country_flag = crystal_core_limit_reached
+                }
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.22.b"
+		custom_tooltip = eolbioengfac.22.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.6 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Lesser Void Cloud ###
+country_event = {
+	id = eolbioengfac.23
+	title = "eolbioengfac.23.name"
+	desc = "eolbioengfac.23.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.23.a"
+		custom_tooltip = eolbioengfac.23.a.tooltip
+		owner = {
+			add_resource = { energy = -550 }
+            add_resource = { sr_zro = -2 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Lesser_Void_Cloud"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Lesser_Cloud_Entity"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = lesser_void_cloud_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_psionic_theory
+                has_technology = tech_mine_zro
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 550
+				}
+                resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 2
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.23.b"
+		custom_tooltip = eolbioengfac.23.b.tooltip
+		owner = {
+			add_resource = { energy = -2750 }
+            add_resource = { sr_zro = -10 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Lesser_Void_Clouds"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 5
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Lesser_Cloud_Entity"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = lesser_void_cloud_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_psionic_theory
+                has_technology = tech_mine_zro
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 2750
+				}
+                resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 10
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.23.c"
+		custom_tooltip = eolbioengfac.23.c.tooltip
+		owner = {
+			add_resource = { energy = -5500 }
+            add_resource = { sr_zro = -20 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Lesser_Void_Cloud_Group"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 10
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Lesser_Cloud_Entity"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = lesser_void_cloud_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_psionic_theory
+                has_technology = tech_mine_zro
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 5500
+				}
+                resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 20
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.23.d"
+		custom_tooltip = eolbioengfac.23.d.tooltip
+		owner = {
+			add_resource = { energy = -27500 }
+            add_resource = { sr_zro = -100 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Lesser_Void_Cloud_Compound"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 50
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Lesser_Cloud_Entity"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = lesser_void_cloud_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_psionic_theory
+                has_technology = tech_mine_zro
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 27500
+				}
+                resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 100
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.23.e"
+		custom_tooltip = eolbioengfac.23.e.tooltip
+		owner = {
+			add_resource = { energy = -55000 }
+            add_resource = { sr_zro = -200 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Lesser_Void_Cloud_Union"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 100
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Lesser_Cloud_Entity"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = lesser_void_cloud_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_psionic_theory
+                has_technology = tech_mine_zro
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 55000
+				}
+                resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 200
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.23.f"
+		custom_tooltip = eolbioengfac.23.f.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.7 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Void Cloud ###
+country_event = {
+	id = eolbioengfac.24
+	title = "eolbioengfac.24.name"
+	desc = "eolbioengfac.24.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.24.a"
+		custom_tooltip = eolbioengfac.24.a.tooltip
+		owner = {
+			add_resource = { energy = -1100 }
+            add_resource = { sr_zro = -3 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Void_Cloud"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Cloud_Entity"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = void_cloud_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_psionic_theory
+                has_technology = tech_mine_zro
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 1100
+				}
+                resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 3
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.24.b"
+		custom_tooltip = eolbioengfac.24.b.tooltip
+		owner = {
+			add_resource = { energy = -5500 }
+            add_resource = { sr_zro = -15 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Void_Clouds"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 5
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Cloud_Entity"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = void_cloud_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_psionic_theory
+                has_technology = tech_mine_zro
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 5500
+				}
+                resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 15
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.24.c"
+		custom_tooltip = eolbioengfac.24.c.tooltip
+		owner = {
+			add_resource = { energy = -11000 }
+            add_resource = { sr_zro = -30 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Void_Cloud_Group"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 10
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Cloud_Entity"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = void_cloud_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_psionic_theory
+                has_technology = tech_mine_zro
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 11000
+				}
+                resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 30
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.24.d"
+		custom_tooltip = eolbioengfac.24.d.tooltip
+		owner = {
+			add_resource = { energy = -55000 }
+            add_resource = { sr_zro = -150 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Void_Cloud_Compound"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 50
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Cloud_Entity"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = void_cloud_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_psionic_theory
+                has_technology = tech_mine_zro
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 55000
+				}
+                resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 150
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.24.e"
+		custom_tooltip = eolbioengfac.24.e.tooltip
+		owner = {
+			add_resource = { energy = -110000 }
+            add_resource = { sr_zro = -300 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Void_Cloud_Union"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 100
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Cloud_Entity"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            add_modifier = {
+                modifier = void_cloud_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_psionic_theory
+                has_technology = tech_mine_zro
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 110000
+				}
+                resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 300
+				}
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.24.f"
+		custom_tooltip = eolbioengfac.24.f.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.7 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Shroud Avatar ###
+country_event = {
+	id = eolbioengfac.25
+	title = "eolbioengfac.25.name"
+	desc = "eolbioengfac.25.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.25.a"
+		custom_tooltip = eolbioengfac.25.a.tooltip
+		owner = {
+			add_resource = { energy = -7500 }
+            add_resource = { sr_zro = -100 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Shroud_Avatar"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Corrupted_Avatar"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            if = {
+                limit = {
+                    count_owned_ship = {
+                        limit = { is_ship_size = eng_imp_corrupted_avatar }
+                        count = 5
+                    }
+                }
+                set_country_flag = avatar_limit_reached
+            }
+            add_modifier = {
+                modifier = shroud_avatar_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = { 
+				has_technology = tech_psionic_theory
+                has_technology = tech_mine_zro
+                has_ascension_perk = ap_leviathan_engineering
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 7500
+				}
+                resource_stockpile_compare = {
+					resource = sr_zro
+					value >= 100
+				}
+                NOT = {
+                    has_country_flag = avatar_limit_reached
+                }
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.25.b"
+		custom_tooltip = eolbioengfac.25.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.7 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Voidspawn ###
+country_event = {
+	id = eolbioengfac.26
+	title = "eolbioengfac.26.name"
+	desc = "eolbioengfac.26.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.26.a"
+		custom_tooltip = eolbioengfac.26.a.tooltip
+		owner = {
+			add_resource = { food = -8000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Voidspawn"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Voidspawn"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            if = {
+                limit = {
+                    count_owned_ship = {
+                        limit = { is_ship_size = eng_imp_leviathan_01_voidspawn }
+                        count = 3
+                    }
+                }
+                set_country_flag = voidspawn_limit_reached
+            }
+            add_modifier = {
+                modifier = leviathan_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = {
+                has_ascension_perk = ap_leviathan_engineering
+				resource_stockpile_compare = {
+					resource = food
+					value >= 8000
+				}
+                NOT = {
+                    has_country_flag = voidspawn_limit_reached
+                }
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.26.b"
+		custom_tooltip = eolbioengfac.26.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.8 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Ether Drake Hatchling ###
+country_event = {
+	id = eolbioengfac.27
+	title = "eolbioengfac.27.name"
+	desc = "eolbioengfac.27.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.27.a"
+		custom_tooltip = eolbioengfac.27.a.tooltip
+		owner = {
+			add_resource = { food = -5000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Ether_Drake_Hatchling"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Imp_Dragonspawn"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            if = {
+                limit = {
+                    count_owned_ship = {
+                        limit = { is_ship_size = eng_imp_space_dragon_baby }
+                        count = 8
+                    }
+                }
+                set_country_flag = dragon_baby_limit_reached
+            }
+            add_modifier = {
+                modifier = baby_dragon_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = {
+                has_ascension_perk = ap_leviathan_engineering
+				resource_stockpile_compare = {
+					resource = food
+					value >= 5000
+				}
+                NOT = {
+                    has_country_flag = dragon_baby_limit_reached
+                }
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.27.b"
+		custom_tooltip = eolbioengfac.27.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.9 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Ether Drake ###
+country_event = {
+	id = eolbioengfac.28
+	title = "eolbioengfac.28.name"
+	desc = "eolbioengfac.28.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.28.a"
+		custom_tooltip = eolbioengfac.28.a.tooltip
+		owner = {
+			add_resource = { food = -8500 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Ether_Drake"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Imp_Dragon"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            if = {
+                limit = {
+                    count_owned_ship = {
+                        limit = { is_ship_size = eng_imp_space_dragon }
+                        count = 3
+                    }
+                }
+                set_country_flag = dragon_limit_reached
+            }
+            add_modifier = {
+                modifier = leviathan_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = {
+                has_ascension_perk = ap_leviathan_engineering
+				resource_stockpile_compare = {
+					resource = food
+					value >= 8500
+				}
+                NOT = {
+                    has_country_flag = dragon_limit_reached
+                }
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.28.b"
+		custom_tooltip = eolbioengfac.28.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.9 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Dimensional Horror ###
+country_event = {
+	id = eolbioengfac.29
+	title = "eolbioengfac.29.name"
+	desc = "eolbioengfac.29.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.29.a"
+		custom_tooltip = eolbioengfac.29.a.tooltip
+		owner = {
+			add_resource = { food = -5000 }
+            add_resource = { sr_dark_matter = -150 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Dimensional_Horror"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Imp_Dimensional_Horror"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            if = {
+                limit = {
+                    count_owned_ship = {
+                        limit = { is_ship_size = eng_imp_dimensional_horror }
+                        count = 3
+                    }
+                }
+                set_country_flag = dimensional_horror_limit_reached
+            }
+            add_modifier = {
+                modifier = leviathan_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = {
+                has_technology = tech_psionic_theory
+                has_ascension_perk = ap_leviathan_engineering
+				resource_stockpile_compare = {
+					resource = food
+					value >= 5000
+				}
+                resource_stockpile_compare = {
+					resource = sr_dark_matter
+					value >= 150
+				}
+                NOT = {
+                    has_country_flag = dimensional_horror_limit_reached
+                }
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.29.b"
+		custom_tooltip = eolbioengfac.29.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.10 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}
+
+### Stellar Devourer ###
+country_event = {
+	id = eolbioengfac.30
+	title = "eolbioengfac.30.name"
+	desc = "eolbioengfac.30.desc"
+	hide_window = no
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		portrait = root.leader
+		planet_background = root
+		graphical_culture = root
+		city_level = root
+		room = bio_engineering_facility_room
+	}
+    
+    option = {
+		name = "eolbioengfac.30.a"
+		custom_tooltip = eolbioengfac.30.a.tooltip
+		owner = {
+			add_resource = { energy = -55000 }
+		}
+		hidden_effect = {
+            if = {
+                limit = { has_country_flag = bio_facility_completed }
+                while = {
+                    count = 1
+                    every_system_within_border = { 
+                        limit = { has_star_flag = bioengstar }
+                        random_system_planet = {
+                            limit = { is_star = yes }
+                            save_global_event_target_as = bioengtarget
+                            solar_system = {
+                                create_fleet = {
+                                    name = "NAME_Stellar_Devourer"
+                                    effect = {
+                                        set_owner = root
+                                        while = {
+                                            count = 1
+                                            create_ship = {
+                                                name = random
+                                                design = "NAME_Eng_Imp_Stellarite"
+                                            }
+                                        }
+                                        set_location = {
+                                            target = event_target:bioengtarget
+                                            distance = 45
+                                            angle = random
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+			}
+            if = {
+                limit = {
+                    count_owned_ship = {
+                        limit = { is_ship_size = eng_imp_stellar_devourer }
+                        count = 2
+                    }
+                }
+                set_country_flag = devourer_limit_reached
+            }
+            add_modifier = {
+                modifier = devourer_timer
+                days = 360
+            }
+		}
+		allow = {
+			owner = {
+                has_ascension_perk = ap_leviathan_engineering
+                has_ascension_perk = ap_ultimate_leviathan_engineering
+				resource_stockpile_compare = {
+					resource = energy
+					value >= 55000
+				}
+                NOT = {
+                    has_country_flag = devourer_limit_reached
+                }
+			}
+		}
+	}
+	option = {
+		name = "eolbioengfac.30.b"
+		custom_tooltip = eolbioengfac.30.b.tooltip
+		hidden_effect = {
+			country_event = { id = eolbioengfac.11 }
+		}
+	}
+    
+    after = {
+        if = {
+            limit = { has_country_flag = bio_facility_completed }
+            while = {
+                count = 1
+                every_system_within_border = { 
+                    limit = { has_star_flag = bioengstar }
+                    remove_star_flag = bioengstar
+                    random_system_planet = {
+                        limit = { has_planet_flag = bioeng_planet_build }
+                        remove_planet_flag = bioeng_planet_build
+                    }
+                }
+            }
+        }
+        clear_global_event_target = bioengtarget
+    }
+}

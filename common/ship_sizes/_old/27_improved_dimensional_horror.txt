@@ -46,7 +46,7 @@ eng_imp_dimensional_horror = {
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 4
 	is_space_station = no
-	icon_frame = 12
+	icon = ship_size_space_monster
 	text_icon = military_size_space_creature
 	
 	base_buildtime = 1700

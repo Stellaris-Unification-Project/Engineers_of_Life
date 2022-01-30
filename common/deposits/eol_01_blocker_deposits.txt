@@ -12,7 +12,7 @@ d_cryovats = {
 	icon = d_cryovats
 	time = 150
 
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers
 
 	potential = {

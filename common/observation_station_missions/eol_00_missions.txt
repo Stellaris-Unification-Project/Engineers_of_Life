@@ -23,11 +23,7 @@ stone_advancement_0 = {
 			exists = owner
 			owner = { has_country_flag = stone_age }
 		}
-		NOR = {
-			has_valid_civic = civic_machine_terminator
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-		}
+		is_homicidal = no
 	}
 
 	valid = {
@@ -40,11 +36,7 @@ stone_advancement_0 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -85,11 +77,7 @@ bronze_advancement_1 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -130,11 +118,7 @@ iron_advancement_2 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -175,11 +159,7 @@ medieval_advancement_3 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -220,11 +200,7 @@ renaissance_advancement_4 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -265,11 +241,7 @@ steam_advancement_5 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -318,11 +290,7 @@ industrial_advancement_6 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -371,11 +339,7 @@ machine_advancement_7 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {
@@ -424,11 +388,7 @@ atomic_advancement_8 = {
 				owner = { NOT = { has_ethic = ethic_fanatic_xenophobe } }
 			}
 		}
-		NOR = {
-			has_valid_civic = civic_fanatic_purifiers
-			has_valid_civic = civic_hive_devouring_swarm
-			has_valid_civic = civic_machine_terminator
-		}
+		is_homicidal = no
 	}
 
 	ai_weight = {

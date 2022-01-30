@@ -43,7 +43,7 @@ eng_imp_space_dragon_baby = {
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	is_space_station = no
-	icon_frame = 12
+	icon = ship_size_space_monster
 	text_icon = military_size_space_creature
 	can_be_inspected = yes
 	
@@ -100,7 +100,7 @@ eng_imp_space_dragon = {
 	section_slots = { "mid" = { locator = "part1" } }
 	num_target_locators = 0
 	is_space_station = no
-	icon_frame = 12
+	icon = ship_size_space_monster
 	text_icon = military_size_space_creature
 	can_be_inspected = yes
 	

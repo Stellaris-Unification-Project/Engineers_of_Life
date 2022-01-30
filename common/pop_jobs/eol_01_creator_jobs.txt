@@ -16,9 +16,10 @@ nonfe_overseer = {
 		is_being_assimilated = no
 	}
 
+	possible_precalc = can_fill_ruler_job
+
 	possible = {
-		ruler_job_check_trigger = yes
-	}
+		}
 	
 	planet_modifier = {
 		planet_amenities_add = 10
@@ -161,7 +162,7 @@ nonfe_protector = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_non_swapped_tradition = tr_domination_judgment_corps }
+			owner = { has_active_tradition = tr_domination_judgment_corps }
 		}
 		modifier = {
 			planet_crime_add = -5
